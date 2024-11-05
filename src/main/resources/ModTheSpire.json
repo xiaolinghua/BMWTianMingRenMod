@@ -1,0 +1,12 @@
+{
+  "modid": "blackmythwukong",
+  "name": "天命人",
+  "author_list": ["霄凌花"],
+  "credits": "Basemod, ModTheSpire, #modding",
+  "description": "你将扮演一位“天命人”，为了探寻昔日传说的真相，踏上一条充满危险与惊奇的尖塔之路。",
+  "version": "0.0.5",
+  "sts_version": "12-18-2020",
+  "mts_version": "3.30.3",
+  "dependencies": ["basemod","stslib"],
+  "update_json": ""
+}

@@ -1,0 +1,29 @@
+{
+"skeleton": {
+	"hash": "+QmtpouEln3GbZwIR2CVi1Pp+6s",
+	"spine": "3.8.75",
+	"x": -570.2,
+	"y": -2.53,
+	"width": 1055,
+	"height": 1195,
+	"images": "D:/b1meishu/juxin",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "Jutianmingren", "bone": "root", "attachment": "Jutianmingren" }
+],
+"animations": {
+	"animation": {},
+	"idle": {}
+},
+"skins": {
+	"default": {
+		"Jutianmingren": {
+			"Jutianmingren": { "x": -42.7, "y": 594.97, "width": 1055, "height": 1195 }
+		}
+	}
+}
+}

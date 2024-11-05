@@ -1,0 +1,55 @@
+
+tianmingren.png
+size: 1499,820
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Larm
+  rotate: true
+  xy: 1199, 330
+  size: 488, 289
+  orig: 496, 295
+  offset: 1, 5
+  index: -1
+Lmawei
+  rotate: true
+  xy: 1111, 207
+  size: 121, 386
+  orig: 124, 388
+  offset: 1, 1
+  index: -1
+Rarm
+  rotate: true
+  xy: 1111, 60
+  size: 145, 247
+  orig: 149, 251
+  offset: 2, 2
+  index: -1
+Rmawei
+  rotate: true
+  xy: 738, 2
+  size: 329, 371
+  orig: 333, 375
+  offset: 3, 3
+  index: -1
+body
+  rotate: false
+  xy: 738, 333
+  size: 459, 485
+  orig: 461, 490
+  offset: 1, 2
+  index: -1
+head
+  rotate: false
+  xy: 1360, 60
+  size: 121, 145
+  orig: 123, 148
+  offset: 1, 2
+  index: -1
+pifeng
+  rotate: false
+  xy: 2, 20
+  size: 734, 798
+  orig: 734, 798
+  offset: 0, 0
+  index: -1

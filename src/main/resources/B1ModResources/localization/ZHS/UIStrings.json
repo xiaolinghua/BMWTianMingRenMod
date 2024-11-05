@@ -1,0 +1,18 @@
+{
+  "blackmythwukong:exhaustCardMod": {
+    "TEXT": [
+      "blackmythwukong:超虚无 。 NL ",
+      ""
+    ]
+  },
+  "blackmythwukong:CanNotGetGunShiMod": {
+    "TEXT": [
+      "这张牌无法获得 blackmythwukong:棍势 。 NL ",
+      ""
+    ]
+  },"JinDouYunAction": {
+  "TEXT": [
+    "选择一张牌，抽牌直到你抽到它。"
+  ]
+}
+}
