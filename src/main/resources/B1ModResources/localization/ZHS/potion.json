@@ -1,0 +1,9 @@
+{
+  "blackmythwukong:JinDan": {
+    "NAME": "金丹",
+    "DESCRIPTIONS": ["睹物思人，看着这金丹，使你倍感虚弱。服用后失去 #y10 点生命 "]
+  },"blackmythwukong:QingTianHuLu": {
+  "NAME": "青田葫芦",
+  "DESCRIPTIONS": ["获得1点 #y棍势 ，使用后会留下一个空葫芦。战斗结束后恢复葫芦中的酒。"]
+}
+}

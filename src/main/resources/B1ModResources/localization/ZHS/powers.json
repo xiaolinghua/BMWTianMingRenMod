@@ -1,0 +1,126 @@
+{
+  "blackmythwukong:GunShi": {
+    "NAME": "棍势",
+    "DESCRIPTIONS": [
+      "当你获得 #b",
+      " 层 #y棍势 时将一张造成 #b",
+      " 点伤害的 #y重棍 加入手牌 。"
+    ]
+  },
+  "blackmythwukong:PoZhan": {
+    "NAME": "破绽",
+    "DESCRIPTIONS": [
+      "每当目标敌人受到攻击时，你获得一点 #y棍势 ，不可叠加"
+    ]
+  },
+  "blackmythwukong:KuiLeiShu": {
+    "NAME": "身外身",
+    "DESCRIPTIONS": [
+      "将受到的所有伤害和生命减少效果降低为1。"
+    ]
+  },
+  "blackmythwukong:BeiLiWanPower": {
+    "NAME": "倍力丸",
+    "DESCRIPTIONS": [
+      "每当 #y棍势 到达十层后，获得 #b",
+      " 点力量。"
+    ]
+  },"blackmythwukong:RuZhuangJinZhongPower": {
+  "NAME": "如撞金钟",
+  "DESCRIPTIONS": [
+    "如果攻击者未能击穿格挡，给予攻击者 #y破绽 。"
+  ]
+},"blackmythwukong:AnShenFaPower": {
+  "NAME": "安身法",
+  "DESCRIPTIONS": [
+    "回合开始时额外获得 #b",
+    " 点棍势，恢复 #b",
+    " 点生命，抽 #b",
+    " 张牌，对敌人造成未被格挡的伤害时失去该能力"
+  ]
+},"blackmythwukong:FengYunZhuanPower": {
+  "NAME": "风云转",
+  "DESCRIPTIONS": [
+    "免费打出江海翻。"
+  ]
+},
+  "blackmythwukong:HuaXianWeiYiPower": {
+    "NAME": "化险为夷",
+    "DESCRIPTIONS": [
+      "每当获得 #y棍势 时，获得 #b",
+      " 点格挡。"
+    ]
+  },"blackmythwukong:SanTouLiuBiPower": {
+  "NAME": "三头六臂",
+  "DESCRIPTIONS": [
+    "你每回合打出的的第一张召唤身外身牌牌会打出两次。",
+    "你每回合打出的第 #b",
+    " 张召唤身外身牌牌会打出两次。"
+  ]
+},"blackmythwukong:TongTouPower": {
+  "NAME": "铜头",
+  "DESCRIPTIONS": [
+    "无视 #b",
+    " 点及以下敌人的伤害，在受到 #b",
+    " 点以上敌人的伤害时失去该能力。"
+  ]
+},
+  "blackmythwukong:DingShenPower": {
+    "NAME": "定身",
+    "DESCRIPTIONS": [
+      "在 #b",
+      " 个回合内动弹不得。",
+      " 个回合内动弹不得。"
+    ]
+  },
+  "blackmythwukong:XinYouXuPower": {
+    "NAME": "心有余",
+    "DESCRIPTIONS": [
+      "每当造成1次攻击时，就获得 #b",
+      " 点 #y棍势 。"
+    ]
+  },
+  "blackmythwukong:BieYouPower": {
+    "NAME": "曾未见",
+    "DESCRIPTIONS": [
+      "本场战斗打出 #y重棍 后，获得 [E] 。"
+    ]
+  },
+  "blackmythwukong:HaoMaoPower": {
+    "NAME": "毫毛",
+    "DESCRIPTIONS": [
+      "你的身外化身数量 。"
+    ]
+  },
+  "blackmythwukong:XuLiPower": {
+    "NAME": "蓄力",
+    "DESCRIPTIONS": [
+      "你的回合结束时获得10层 #y棍势 。 NL 你在这个回合不能打出 #y攻击牌 。"
+    ]
+  },
+  "blackmythwukong:ErXinPower": {
+    "NAME": "二心",
+    "DESCRIPTIONS": [
+      " #y棍势 消失时的 #y棍势点 不会随之消失 。"
+    ]
+  },"blackmythwukong:MonsterDamagePower": {
+  "NAME": "你将受到的伤害",
+  "DESCRIPTIONS": [
+    " 回合结束时你将受到 #b",
+    " 点伤害 #b",
+    " 次。"
+  ]
+}, "blackmythwukong:JuXingSanQiPower": {
+  "NAME": "聚形散气",
+  "DESCRIPTIONS": [
+    " 结束回合后获,得 #b",
+    " 个额外的回合，打出攻击牌后失去该能力 。"
+  ]
+}, "blackmythwukong:BuYouTianPower": {
+  "NAME": "不由天",
+  "DESCRIPTIONS": [
+    " 每回合开始时获得 ",
+    " 。"
+  ]
+}
+}

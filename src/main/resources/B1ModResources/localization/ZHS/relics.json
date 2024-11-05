@@ -1,0 +1,33 @@
+{
+  "blackmythwukong:ChanShiWan": {
+    "NAME": "参势丸",
+    "FLAVOR": "水无常形，兵无常势",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，获得 #b3 层 #yblackmythwukong:棍势 。"
+    ]
+  },"blackmythwukong:SheChangSi": {
+  "NAME": "舌尝思",
+  "FLAVOR": "食髓知味，乐极生悲",
+  "DESCRIPTIONS": [
+    "定身法对所有敌人生效。当你拾起这件遗物时，获得一张定身法+。"
+  ]
+},"blackmythwukong:LingTaiYaoMiao": {
+  "NAME": "灵台药苗",
+  "FLAVOR": "灵台无物为之清，一念不起为之静。",
+  "DESCRIPTIONS": [
+    "每场战斗开始时，变出1只 #yblackmythwukong:身外身 。"
+  ]
+},"blackmythwukong:ShenBenYou": {
+  "NAME": "身本忧",
+  "FLAVOR": "健体牢骨，生死未卜。",
+  "DESCRIPTIONS": [
+    "每当你打出 #yblackmythwukong:重棍 时，获得 [E] 。"
+  ]
+},"blackmythwukong:YanKanXi": {
+  "NAME": "眼看喜",
+  "FLAVOR": "见貌辨色，恃才生恶。",
+  "DESCRIPTIONS": [
+    "在你的回合结束时，每有一个身外身或敌人，获得 #b1 点 #y格挡 。"
+  ]
+}
+}
