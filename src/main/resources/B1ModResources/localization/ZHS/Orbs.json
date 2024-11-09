@@ -1,0 +1,12 @@
+{
+  "MyEmptyOrbSlot": {
+    "DESCRIPTION": [
+      " #y棍势 层数： #b",
+      " 。",
+      "无棍势",
+      " NL #y棍势点 ： #b",
+      " 。"
+    ],
+    "NAME": "棍势槽"
+  }
+}

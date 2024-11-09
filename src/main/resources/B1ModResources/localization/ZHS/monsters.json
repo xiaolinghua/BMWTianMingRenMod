@@ -1,0 +1,20 @@
+{
+  "blackmythwukong:KuiLei": {
+    "MOVES": [
+      "不能行动"
+    ],
+    "NAME": "身外身",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "blackmythwukong:JinBi": {
+    "MOVES": [
+      "不能行动"
+    ],
+    "NAME": "广智",
+    "DIALOG": [
+      "施主何不放下棍棒，与我学学佛法？ "
+    ]
+  }
+}

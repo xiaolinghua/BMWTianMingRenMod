@@ -1,0 +1,253 @@
+以下是对您提供的《杀戮尖塔》（Slay the Spire）中战斗特效类文件名的逐行翻译。请注意，这些翻译尽量保持了原意的准确性，但可能因文化和语境差异而有所调整。
+
+AdditiveSlashImpactEffect.java - 加成斩击冲击效果
+AdrenalineEffect.java - 肾上腺素效果
+AnimatedSlashEffect.java - 动画斩击效果
+BattleStartEffect.java - 战斗开始效果
+BiteEffect.java - 咬击效果
+BlizzardEffect.java - 暴风雪效果
+BlockedNumberEffect.java - 阻挡数字效果
+BlockedWordEffect.java - 阻挡文字效果
+BlockImpactLineEffect.java - 格挡冲击线效果
+BloodShotEffect.java - 喷血效果
+BloodShotParticleEffect.java - 喷血粒子效果
+BlurWaveAdditiveEffect.java - 模糊波加成效果
+BlurWaveChaoticEffect.java - 混乱模糊波效果
+BlurWaveNormalEffect.java - 普通模糊波效果
+BossCrystalImpactEffect.java - 首领水晶冲击效果
+BuffParticleEffect.java - 增益粒子效果
+CardPoofEffect.java - 卡片消失效果
+CardPoofParticle.java - 卡片消失粒子
+ClashEffect.java - 碰撞效果
+ClawEffect.java - 爪击效果
+CleaveEffect.java - 劈砍效果
+DaggerSprayEffect.java - 飞刀喷射效果
+DamageImpactBlurEffect.java - 伤害冲击模糊效果
+DamageImpactCurvyEffect.java - 伤害冲击曲线效果
+DamageImpactLineEffect.java - 伤害冲击线效果
+DamageNumberEffect.java - 伤害数字效果
+DarkOrbActivateEffect.java - 暗黑球激活效果
+DarkOrbActivateParticle.java - 暗黑球激活粒子
+DarkOrbPassiveEffect.java - 暗黑球被动效果
+DeckPoofEffect.java - 牌组消失效果
+DeckPoofParticle.java - 牌组消失粒子
+DevotionEffect.java - 奉献效果
+DieDieDieEffect.java - 死亡效果
+EmpowerCircleEffect.java - 强化光环效果
+EmpowerEffect.java - 强化效果
+EmptyStanceEffect.java - 空架势效果
+EmptyStanceParticleEffect.java - 空架势粒子效果
+EntangleEffect.java - 缠绕效果
+ExplosionSmallEffect.java - 小型爆炸效果
+FallingIceEffect.java - 落冰效果
+FastingEffect.java - 禁食效果
+FireballEffect.java - 火球效果
+FlameBarrierEffect.java - 火焰屏障效果
+FlameParticleEffect.java - 火焰粒子效果
+FlashAtkImgEffect.java - 闪光攻击图像效果
+FlashIntentEffect.java - 闪光意图效果
+FlashIntentParticle.java - 闪光意图粒子
+FlashPowerEffect.java - 闪光力量效果
+FlickCoinEffect.java - 抛硬币效果
+FlyingDaggerEffect.java - 飞刀效果
+FlyingOrbEffect.java - 飞球效果
+FlyingSpikeEffect.java - 飞刺效果
+FrostOrbActivateEffect.java - 冰霜球激活效果
+FrostOrbActivateParticle.java - 冰霜球激活粒子
+FrostOrbPassiveEffect.java - 冰霜球被动效果
+GainPowerEffect.java - 获得力量效果
+GhostIgniteEffect.java - 鬼火点燃效果
+GiantEyeEffect.java - 巨眼效果
+GiantFireEffect.java - 巨火效果
+GiantTextEffect.java - 巨大文字效果
+GoldenSlashEffect.java - 金色斩击效果
+GrandFinalEffect.java - 大结局效果
+HbBlockBrokenEffect.java - 血量阻挡破碎效果
+HealEffect.java - 治疗效果
+HealNumberEffect.java - 治疗数字效果
+HealPanelEffect.java - 治疗面板效果
+HealVerticalLineEffect.java - 垂直治疗线效果
+HeartBuffEffect.java - 心脏增益效果
+HeartMegaDebuffEffect.java - 心脏大减益效果
+HemokinesisEffect.java - 血动力效果
+HemokinesisParticle.java - 血动力粒子
+IceShatterEffect.java - 冰裂效果
+ImpactSparkEffect.java - 冲击火花效果
+InflameEffect.java - 燃烧效果
+IntenseZoomEffect.java - 强烈缩放效果
+IntenseZoomParticle.java - 强烈缩放粒子
+IntimidateEffect.java - 恐吓效果
+InversionBeamEffect.java - 反转光束效果
+IronWaveEffect.java - 铁波效果
+IronWaveParticle.java - 铁波粒子
+LaserBeamEffect.java - 激光束效果
+LightBulbEffect.java - 电灯泡效果
+LightFlareParticleEffect.java - 光耀粒子效果
+LightningEffect.java - 闪电效果
+LightningOrbActivateEffect.java - 闪电球激活效果
+LightningOrbPassiveEffect.java - 闪电球被动效果
+LightRayFlyOutEffect.java - 光束飞出效果
+LoseHPEffect.java - 失去生命效果
+LosePowerEffect.java - 失去力量效果
+MindblastEffect.java - 精神爆破效果
+MiracleEffect.java - 奇迹效果
+MoveNameEffect.java - 移动名称效果
+OfferingEffect.java - 献祭效果
+OmegaFlashEffect.java - 欧米伽闪光效果
+OrbFlareEffect.java - 球体闪光效果
+PingHpEffect.java - 生命值提示效果
+PlasmaOrbActivateEffect.java - 等离子球激活效果
+PlasmaOrbActivateParticle.java - 等离子球激活粒子
+PlasmaOrbPassiveEffect.java - 等离子球被动效果
+PotionBounceEffect.java - 药水弹跳效果
+PowerBuffEffect.java - 力量增益效果
+PowerDebuffEffect.java - 力量减益效果
+PowerExpireTextEffect.java - 力量过期文字效果
+PowerIconShowEffect.java - 力量图标显示效果
+PressurePointEffect.java - 压力点效果
+ReaperEffect.java - 死神效果
+RedFireballEffect.java - 红色火球效果
+RedFireBurstParticleEffect.java - 红色火焰爆发粒子效果
+RipAndTearEffect.java - 撕裂效果
+RoomTintEffect.java - 房间色调效果
+SanctityEffect.java - 圣洁效果
+ScrapeEffect.java - 刮擦效果
+ScreenOnFireEffect.java - 屏幕燃烧效果
+SearingBlowEffect.java - 灼热打击效果
+ShockWaveEffect.java - 冲击波效果
+SilentGainPowerEffect.java - 静默获得力量效果
+SmallLaserEffect.java - 小型激光效果
+SmokeBlurEffect.java - 烟雾模糊效果
+SmokeBombEffect.java - 烟雾弹效果
+SmokingEmberEffect.java - 冒烟余��
+以下是对您提供的《杀戮尖塔》（Slay the Spire）中战斗特效文件名的逐行翻译：
+
+SpeechBubble.java - 对话气泡特效
+SpeechTextEffect.java - 对话文字特效
+SpotlightEffect.java - 聚光灯特效
+SpotlightPlayerEffect.java - 玩家聚光灯特效
+StaffFireEffect.java - 法杖火焰特效
+StarBounceEffect.java - 星星弹跳特效
+SumDamageEffect.java - 总伤害特效
+TextAboveCreatureEffect.java - 生物上方文字特效
+TextCenteredEffect.java - 居中文字特效
+ThoughtBubble.java - 思想气泡特效
+TintEffect.java - 着色特效
+TorchHeadFireEffect.java - 火把头部火焰特效
+TouchPickupGold.java - 触摸拾取金币特效
+UncommonPotionParticleEffect.java - 稀有药水粒子特效
+UnlockTextEffect.java - 解锁文字特效
+UpgradeHammerImprintEffect.java - 升级锤印特效
+UpgradeShineEffect.java - 升级闪光特效
+UpgradeShineParticleEffect.java - 升级闪光粒子特效
+WallopEffect.java - 重击特效
+WarningSignEffect.java - 警告标志特效
+AscensionLevelUpTextEffect.java - 升阶等级提升文字特效
+AscensionUnlockedTextEffect.java - 升阶解锁文字特效
+AwakenedEyeParticle.java - 觉醒之眼粒子特效
+AwakenedWingParticle.java - 觉醒之翼粒子特效
+BetaCardArtUnlockedTextEffect.java - Beta卡牌艺术解锁文字特效
+BobEffect.java - 摆动特效
+BorderFlashEffect.java - 边框闪烁特效
+BorderLongFlashEffect.java - 边框长闪烁特效
+BossChestShineEffect.java - 首领宝箱闪光特效
+CardTrailEffect.java - 卡牌轨迹特效
+ChestShineEffect.java - 宝箱闪光特效
+ClangClangClangEffect.java - 铛铛铛特效
+CloudBubble.java - 云气泡特效
+CollectorCurseEffect.java - 收集者诅咒特效
+CollectorStakeEffect.java - 收集者木桩特效
+ConeEffect.java - 锥形特效
+DamageHeartEffect.java - 伤害心形特效
+DarkSmokePuffEffect.java - 黑暗烟雾膨胀特效
+DeathScreenFloatyEffect.java - 死亡屏幕漂浮特效
+DebuffParticleEffect.java - 减益粒子特效
+DiscardGlowEffect.java - 丢弃发光特效
+DoorFlashEffect.java - 门闪烁特效
+DoorShineParticleEffect.java - 门闪光粒子特效
+EndTurnGlowEffect.java - 回合结束发光特效
+EndTurnLongPressBarFlashEffect.java - 回合结束长按条闪烁特效
+EnemyTurnEffect.java - 敌人回合特效
+ExhaustBlurEffect.java - 耗尽模糊特效
+ExhaustEmberEffect.java - 耗尽余烬特效
+ExhaustPileParticle.java - 耗尽堆粒子特效
+FadeWipeParticle.java - 淡出擦拭粒子特效
+FallingDustEffect.java - 掉落尘埃特效
+FastCardObtainEffect.java - 快速获得卡牌特效
+FastDarkSmoke.java - 快速黑暗烟雾
+FastSmoke.java - 快速烟雾
+FastSmokeParticle.java - 快速烟雾粒子
+FireBurstParticleEffect.java - 火焰爆发粒子特效
+FlameAnimationEffect.java - 火焰动画特效
+FlameBallParticleEffect.java - 火焰球粒子特效
+FlashPotionEffect.java - 闪光药水特效
+FloatyEffect.java - 漂浮特效
+GainGoldTextEffect.java - 获得金币文字特效
+GainPennyEffect.java - 获得铜币特效
+GameDeckGlowEffect.java - 游戏牌组发光特效
+GameSavedEffect.java - 游戏保存特效
+GenericSmokeEffect.java - 通用烟雾特效
+GhostlyFireEffect.java - 鬼火特效
+GhostlyWeakFireEffect.java - 鬼魅微弱火焰特效
+GlowRelicParticle.java - 发光遗物粒子
+GlowyFireEyesEffect.java - 发光火焰眼睛特效
+InfiniteSpeechBubble.java - 无限对话气泡特效
+LineTestEffect.java - 线条测试特效
+MapCircleEffect.java - 地图圆圈特效
+MapDot.java - 地图点
+MegaDialogTextEffect.java - 大型对话文字特效
+MegaSpeechBubble.java - 大型对话气泡特效
+NecronomicurseEffect.java - 奈克罗曼诅咒特效
+NemesisFireParticle.java - 复仇之火粒子特效
+ObtainKeyEffect.java - 获得钥匙特效
+ObtainPotionEffect.java - 获得药水特效
+PetalEffect.java - 花瓣特效
+PlayerTurnEffect.java - 玩家回合特效
+RainbowCardEffect.java - 彩虹卡牌特效
+RainingGoldEffect.java - 下金雨特效
+RarePotionParticleEffect.java - 稀有药水粒子特效
+RefreshEnergyEffect.java - 能量恢复特效
+RelicAboveCreatureEffect.java - 生物上方遗物特效
+RestartForChangesEffect.java - 为更改重启特效
+RewardGlowEffect.java - 奖励发光特效
+RoomShineEffect.java - 房间闪光特效
+RoomShineEffect2.java - 房间闪光特效2
+ShieldParticleEffect.java - 护盾粒子特效
+ShineLinesEffect.java - 闪光线条特效
+ShineSparkleEffect.java - 闪光火花特效
+ShopSpeechBubble.java - 商店对话气泡特效
+SmokePuffEffect.java - 烟雾膨胀特效
+这些翻译基于文件名和常见的游戏术语，尽量保持了特效名称的直观性和描述性。
+当然，以下是对这些《杀戮尖塔》（Slay the Spire）中特效类文件的逐行翻译（基于文件名和内容推测的功能）：
+
+CardFlashVfx.java
+翻译：卡牌闪光视觉效果.java
+说明：这个类可能负责实现卡牌在屏幕上闪烁或发出光芒的视觉效果。
+CardGlowBorder.java
+翻译：卡牌发光边框.java
+说明：这个类可能用于给卡牌添加发光的边框效果，通常用于突出显示或强调某张卡牌。
+ExhaustCardEffect.java
+翻译：消耗卡牌效果.java
+说明：这个类可能处理当一张卡牌被消耗（例如使用后从游戏中移除）时的视觉效果和逻辑。
+PurgeCardEffect.java
+翻译：清除卡牌效果.java
+说明：这个类可能用于实现一种特殊效果，其中卡牌被从某个区域（如手牌、抽牌堆等）中移除，通常伴随有视觉上的清除或消失效果。
+ShowCardAndAddToDiscardEffect.java
+翻译：展示卡牌并添加到弃牌堆效果.java
+说明：这个类可能用于实现一种效果，即展示一张卡牌并将其添加到玩家的弃牌堆中。
+ShowCardAndAddToDrawPileEffect.java
+翻译：展示卡牌并添加到抽牌堆效果.java
+说明：这个类可能处理展示一张卡牌并将其重新放入抽牌堆的视觉效果和逻辑。
+ShowCardAndAddToHandEffect.java
+翻译：展示卡牌并添加到手牌效果.java
+说明：这个类可能用于实现一种效果，即展示一张卡牌并将其添加到玩家的手牌中。
+ShowCardAndObtainEffect.java
+翻译：展示卡牌并获得效果.java
+说明：这个类可能处理展示一张卡牌并将其添加到玩家获得的卡牌集合中的视觉效果和逻辑，通常意味着玩家获得了这张卡牌。
+ShowCardBrieflyEffect.java
+翻译：短暂展示卡牌效果.java
+说明：这个类可能用于实现短暂地展示一张卡牌然后让其消失的效果，通常用于强调或揭示某张卡牌。
+CardDisappearEffect.java
+翻译：卡牌消失效果.java
+说明：这个类可能处理卡牌从屏幕上消失的视觉效果，通常用于表示卡牌被移除或消耗。
+这些翻译基于文件名和常见的游戏编程术语，实际代码中的实现细节可能有所不同。
