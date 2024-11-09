@@ -34,7 +34,6 @@ public class BuYouJi extends AbstractB1Card {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-
     }
     public boolean canPlay(AbstractCard card)
     {
