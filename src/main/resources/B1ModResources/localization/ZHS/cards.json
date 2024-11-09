@@ -314,17 +314,17 @@
   "FLAVOR": "那块铁，挽着些儿就死，磕着些儿就亡，挨挨儿皮破，擦擦儿筋伤！"
 },"blackmythwukong:WuTing": {
   "NAME": "勿听",
-  "DESCRIPTION": "将 *月玉兔 和 *日金乌 分别放入手牌的两侧，当它们相遇时，将二者消耗并对所有敌人造成15点伤害。 NL 消耗 。",
-  "UPGRADE_DESCRIPTION":"将 *月玉兔 和 *日金乌 分别放入手牌的两侧，当它们相遇时，将二者消耗并对所有敌人造成20点伤害。 NL 消耗 。",
+  "DESCRIPTION": "将 *月玉兔 和 *日金乌 分别放入手牌的两侧，当它们相遇时，对所有敌人造成15点伤害。 消耗 。",
+  "UPGRADE_DESCRIPTION":"将 *月玉兔 和 *日金乌 分别放入手牌的两侧，当它们相遇时，对所有敌人造成20点伤害。 消耗 。",
   "FLAVOR": ""
 },"blackmythwukong:YueYuTu": {
   "NAME": "月玉兔",
-  "DESCRIPTION": "与日金乌之间所有的手牌获得保留效果。相遇时，对所有敌人造成15点伤害。 NL 保留 。",
-  "UPGRADE_DESCRIPTION":"与日金乌之间所有手牌获得保留效果。相遇时，对所有敌人造成20点伤害。 NL 保留 。",
+  "DESCRIPTION": "与日金乌之间所有的手牌获得 保留 效果。相遇时，对所有敌人造成15点伤害。 NL 保留 。",
+  "UPGRADE_DESCRIPTION":"与日金乌之间所有手牌获得 保留 效果。相遇时，对所有敌人造成20点伤害。 NL 保留 。",
   "FLAVOR": ""
 },"blackmythwukong:RiJingWu": {
   "NAME": "日金乌",
-  "DESCRIPTION": "与月玉兔之间所有的手牌获得保留效果。相遇时，将二者消耗。 NL 保留 。",
+  "DESCRIPTION": "与月玉兔之间所有的手牌获得 保留 效果。相遇时，将二者消耗。 NL 保留 。",
   "FLAVOR": ""
 }
 }
