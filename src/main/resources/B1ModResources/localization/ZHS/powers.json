@@ -123,8 +123,8 @@
 },"blackmythwukong:HanDongPower": {
   "NAME": "寒冻",
   "DESCRIPTIONS": [
-    " #y寒冻 达到 #b5 层及以上时敌人 #y攻击 造成的伤害减少 #b50% 。你的每次攻击将使 #y寒冻 层数减 #b1 。 NL 每当你对敌人造成的伤害≥6点时，敌人会被冻伤，额外受到 #b",
-    " 点伤害。"
+    "敌人 #y攻击 造成的伤害减少 #b",
+    " 0% 。NL 你的每次攻击将使 #y寒冻 层数减 #b1 。回合结束时，失去1点 #y寒冻 。 "
   ]
 },
   "blackmythwukong:ShiZhiJingPoPower": {
