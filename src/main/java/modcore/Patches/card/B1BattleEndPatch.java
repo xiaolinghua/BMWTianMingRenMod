@@ -11,9 +11,11 @@
  @SpirePatch(clz = AbstractRoom.class, method = "endBattle")
  public class B1BattleEndPatch
  {
-       public static void Prefix(AbstractRoom __instance)
-       {
+     //private static SfxUtil sfxUtil = SfxUtil.createInstance(new String[] { "B1:TongGuan"}, true, 1.0F, 0F, 1F);
 
+     public static void Prefix(AbstractRoom __instance)
+       {
+            //sfxUtil.playSFX();
            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, "blackmythwukong:FengYunZhuanPower"));
             if (AbstractDungeon.player.hasPotion(QingTianHuLu.ID))
             {

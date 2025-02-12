@@ -57,4 +57,5 @@ public class Strike extends AbstractB1Card {
             this.upgradeDamage(3);
         }
     }
+
 }

@@ -24,7 +24,7 @@ public class JiaWeiChanShiWan extends AbstractB1Card {
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public JiaWeiChanShiWan() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = 10;
+        this.baseMagicNumber = 9;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
     }

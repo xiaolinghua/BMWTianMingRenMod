@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.LightningOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
+import modcore.utils.GunShiUtil;
 
 
 public class MyEmptyOrbSlot extends showsOrb
@@ -39,13 +40,18 @@ public class MyEmptyOrbSlot extends showsOrb
 
        public void updateDescription()
        {
+           int gunShiAmount = 0;
            if (AbstractDungeon.player.hasPower("blackmythwukong:GunShi"))
            {
-               this.description = DESCRIPTION[0] + AbstractDungeon.player.getPower("blackmythwukong:GunShi").amount + DESCRIPTION[1]+DESCRIPTION[3]+AbstractDungeon.player.getPower("blackmythwukong:GunShi").amount/3+DESCRIPTION[4];
+               gunShiAmount = AbstractDungeon.player.getPower("blackmythwukong:GunShi").amount;
+           }
+           if(GunShiUtil.getGunShiMax()<=9)
+           {
+               this.description = DESCRIPTION[0] + gunShiAmount + DESCRIPTION[1]+DESCRIPTION[3]+gunShiAmount/3+DESCRIPTION[4]+DESCRIPTION[5]+ GunShiUtil.getErDouZhongGunDamage()+DESCRIPTION[6]+DESCRIPTION[7]+GunShiUtil.getSanDouZhongGunDamage()+DESCRIPTION[8]+GunShiUtil.getPowerAmount()+DESCRIPTION[9];
            }
            else
            {
-               this.description = DESCRIPTION[2];
+               this.description = DESCRIPTION[0] + gunShiAmount + DESCRIPTION[1]+DESCRIPTION[3]+gunShiAmount/3+DESCRIPTION[4]+DESCRIPTION[5]+ GunShiUtil.getErDouZhongGunDamage()+DESCRIPTION[6]+DESCRIPTION[7]+GunShiUtil.getSanDouZhongGunDamage()+DESCRIPTION[8]+GunShiUtil.getPowerAmount()+DESCRIPTION[9]+DESCRIPTION[10]+GunShiUtil.getSiDouZhongGunDamage()+DESCRIPTION[11]+GunShiUtil.getPowerAmount()+DESCRIPTION[12];
            }
        }
 

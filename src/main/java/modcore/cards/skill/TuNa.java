@@ -1,6 +1,7 @@
 package modcore.cards.skill;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,8 +25,7 @@ public class TuNa extends AbstractB1Card {
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public TuNa() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = 5;
-        this.magicNumber = this.baseMagicNumber;
+        this.magicNumber = this.baseMagicNumber=2;
     }
 
     @Override
@@ -42,6 +42,11 @@ public class TuNa extends AbstractB1Card {
         if (count>0)
         {
             addToBot(new DrawCardAction(p, count));
+            addToBot(new GainEnergyAction(baseMagicNumber-count));
+        }
+        else
+        {
+            addToBot(new GainEnergyAction(baseMagicNumber));
         }
     }
     public void applyPowers()
@@ -56,16 +61,25 @@ public class TuNa extends AbstractB1Card {
         }
         if (count>0)
         {
-            this.rawDescription = CARD_STRINGS.DESCRIPTION + CARD_STRINGS.EXTENDED_DESCRIPTION[1]+count+CARD_STRINGS.EXTENDED_DESCRIPTION[2];
+            int EnergyCount = baseMagicNumber-count;
+            this.rawDescription = CARD_STRINGS.DESCRIPTION + CARD_STRINGS.EXTENDED_DESCRIPTION[0]+count+CARD_STRINGS.EXTENDED_DESCRIPTION[1];
+            for (int i = 0; i < EnergyCount; i++)
+            {
+                this.rawDescription += CARD_STRINGS.EXTENDED_DESCRIPTION[2];
+            }
+            this.rawDescription += CARD_STRINGS.EXTENDED_DESCRIPTION[3];
         }
         else
         {
-            this.rawDescription = CARD_STRINGS.DESCRIPTION + CARD_STRINGS.EXTENDED_DESCRIPTION[0];
+            this.rawDescription = CARD_STRINGS.DESCRIPTION + CARD_STRINGS.EXTENDED_DESCRIPTION[0]+0+CARD_STRINGS.EXTENDED_DESCRIPTION[1];
+            for (int i = 0; i < baseMagicNumber; i++)
+            {
+                this.rawDescription += CARD_STRINGS.EXTENDED_DESCRIPTION[2];
+            }
+            this.rawDescription += CARD_STRINGS.EXTENDED_DESCRIPTION[3];
         }
-
         this.initializeDescription();
     }
-
     @Override
     public void upgrade() {
         if (!this.upgraded) {

@@ -28,7 +28,7 @@ public class TianDiQing extends AbstractB1Card {
     public TianDiQing() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.damage = this.baseDamage = 10;
-        this.baseMagicNumber = 10;
+        this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -44,7 +44,8 @@ public class TianDiQing extends AbstractB1Card {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            upgradeDamage(7);
+            upgradeDamage(3);
+            upgradeMagicNumber(2);
         }
     }
 }

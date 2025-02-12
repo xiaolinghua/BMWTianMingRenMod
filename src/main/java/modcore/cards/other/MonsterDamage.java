@@ -1,7 +1,6 @@
 package modcore.cards.other;
 
 import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,8 +10,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import modcore.Patches.AbstractB1Card;
 import modcore.cardmods.exhaustCardMod;
-
-import java.util.Objects;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
 
@@ -27,7 +24,7 @@ public class MonsterDamage extends AbstractB1Card {
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述
     private static final CardType TYPE = CardType.STATUS;
     private static final CardColor COLOR = BMW_CARD;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.NONE;
     int damageAmount;
     int damageTime;
@@ -57,19 +54,12 @@ public class MonsterDamage extends AbstractB1Card {
     {
         return false;
     }
-    public void triggerOnOtherCardPlayed(AbstractCard c)
-    {
-        if (Objects.equals(c.cardID, "blackmythwukong:ZhongGun"))
-        {
-            addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player,"blackmythwukong:MonsterDamagePower"+extraPowerID));
-            addToBot(new ExhaustSpecificCardAction(this,AbstractDungeon.player.hand));
-        }
-    }
     public void triggerOnExhaust()
     {
         addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player,"blackmythwukong:MonsterDamagePower"+extraPowerID));
     }
-    private void configureDamage() {
+    private void configureDamage()
+    {
         this.rawDescription = CARD_STRINGS.EXTENDED_DESCRIPTION[0]+this.damageAmount+CARD_STRINGS.EXTENDED_DESCRIPTION[1]+this.damageTime+CARD_STRINGS.EXTENDED_DESCRIPTION[2];
         this.initializeDescription();
     }

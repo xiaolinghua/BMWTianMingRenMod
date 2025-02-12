@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -24,11 +25,14 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import modcore.B1Mod;
 import modcore.cards.attack.HuoYanJinJing;
 import modcore.cards.attack.Strike;
+import modcore.cards.attack.YunLiWu;
 import modcore.cards.skill.Defend;
 import modcore.cards.skill.ShanShen;
 import modcore.relics.ChanShiWan;
+import modcore.relics.YiJianYu;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
 import static modcore.Characters.WuKong.Enums.TianMingRen;
@@ -82,7 +86,7 @@ public class WuKong extends CustomPlayer {
 
 
 
-        this.loadAnimation("B1ModResources/images/char/tianmingren.atlas", "B1ModResources/images/char/tianmingren.json", 2F);
+        this.loadAnimation("B1ModResources/images/char/tianmingren.atlas", "B1ModResources/images/char/tianmingren.json", 2.5F);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         // e.setTimeScale(1.2F);
@@ -100,15 +104,23 @@ public class WuKong extends CustomPlayer {
             retVal.add(Defend.ID);
         }
         retVal.add(ShanShen.ID);
-        retVal.add("blackmythwukong:HuoYanJinJing");
+        retVal.add(HuoYanJinJing.ID);
         return retVal;
     }
 
-
+    public void combatUpdate()
+    {
+        super.combatUpdate();
+        //System.out.println("combatUpdate");
+        if(AbstractDungeon.player.hoveredCard!=null&&AbstractDungeon.player.hand.size() > 1&& Objects.equals(AbstractDungeon.player.hoveredCard.cardID, YunLiWu.ID))
+        {
+            AbstractDungeon.player.releaseCard();
+        }
+    }
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(ChanShiWan.ID); // 这里
-        UnlockTracker.markRelicAsSeen("blackmythwukong:ChanShiWan");
+        retVal.add(YiJianYu.ID); // 这里
+        UnlockTracker.markRelicAsSeen(ChanShiWan.ID);
         return retVal;
     }
 

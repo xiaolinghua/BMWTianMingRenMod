@@ -1,6 +1,8 @@
 package modcore.relics;
 
 import basemod.abstracts.CustomRelic;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import modcore.actions.SpawnFenShenAction;
@@ -33,6 +35,7 @@ public class LingTaiYaoMiao extends CustomRelic
         flash();
         KuiLei kuiLei = new KuiLei(0, 0);
         addToBot(new SpawnFenShenAction(kuiLei,null));
+        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         this.grayscale = true;
     }
 }

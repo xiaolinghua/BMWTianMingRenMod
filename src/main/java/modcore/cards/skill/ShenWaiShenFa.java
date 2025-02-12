@@ -1,5 +1,6 @@
 package modcore.cards.skill;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -8,6 +9,7 @@ import modcore.B1Mod;
 import modcore.Patches.AbstractB1Card;
 import modcore.actions.SpawnFenShenAction;
 import modcore.monsters.KuiLei;
+import modcore.powers.NextTurnShenWaiShenPower;
 import modcore.utils.SfxUtil;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
@@ -41,6 +43,10 @@ public class ShenWaiShenFa extends AbstractB1Card {
         float y = 0.0F;
         KuiLei kuiLei = new KuiLei(x, y);
         addToBot(new SpawnFenShenAction(kuiLei,null));
+        if (this.upgraded)
+        {
+            addToBot(new ApplyPowerAction(p, p, new NextTurnShenWaiShenPower(p,1)));
+        }
     }
 
     @Override
@@ -49,7 +55,6 @@ public class ShenWaiShenFa extends AbstractB1Card {
         if (!this.upgraded)
         {
             this.upgradeName();
-            this.isInnate = true;
             // 加上以下两行就能使用UPGRADE_DESCRIPTION了（如果你写了的话）
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();

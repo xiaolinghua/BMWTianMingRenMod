@@ -20,7 +20,7 @@ public class DaShengZiTaiAction extends AbstractGameAction
     {
         {
             System.out.println("-----------------------------------------------球已创建完");
-            GunShiUtil.setGunShiMax(13);
+            GunShiUtil.setGunShiMax(12);
             GunShiUtil.doubleGunShiDamage();
             B1Mod.MyOrblist.add(new MyEmptyOrbSlot());
             B1Mod.MyOrblist.get(3).setSlot(4);

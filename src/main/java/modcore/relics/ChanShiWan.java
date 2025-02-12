@@ -20,7 +20,7 @@ public class ChanShiWan extends CustomRelic
     public static final String ID = "blackmythwukong:ChanShiWan";
     private static final String IMG_PATH = "B1ModResources/images/relics/ChanShiWan.png";
     // 遗物类型
-    private static final RelicTier RELIC_TIER = RelicTier.STARTER;
+    private static final RelicTier RELIC_TIER = RelicTier.COMMON;
     // 点击音效
     private static final LandingSound LANDING_SOUND = LandingSound.FLAT;
     private final String[] dialog={"一粒金丹一因果，我命由天不由我",

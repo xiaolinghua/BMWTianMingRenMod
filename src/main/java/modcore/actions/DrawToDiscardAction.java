@@ -9,9 +9,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class DrawToDiscardAction extends AbstractGameAction
 {
-    private AbstractCard targetCard;
-    private CardGroup group;
-    private float startingDuration;
+    private final AbstractCard targetCard;
+    private final CardGroup group;
+    private final float startingDuration;
 
     public DrawToDiscardAction(AbstractCard targetCard, CardGroup group, boolean isFast) {
         this.targetCard = targetCard;

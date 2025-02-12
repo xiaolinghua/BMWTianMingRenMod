@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import modcore.Patches.AbstractB1Card;
+import modcore.actions.BeiLiWanAction;
 import modcore.powers.BeiLiWanPower;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
@@ -30,9 +31,11 @@ public class BeiLiWan extends AbstractB1Card {
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(AbstractPlayer p, AbstractMonster m)
+    {
         addToBot(new ApplyPowerAction(p,p,new BeiLiWanPower(p, this.magicNumber), this.magicNumber));
-        }
+        addToBot(new BeiLiWanAction(this.magicNumber));
+    }
 
 
     @Override

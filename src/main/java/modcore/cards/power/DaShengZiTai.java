@@ -35,7 +35,7 @@ public class DaShengZiTai extends AbstractB1Card {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         sfxUtil.playSFX();
-        if (GunShiUtil.getGunShiMax()==10)
+        if (GunShiUtil.getGunShiMax()==9)
         {
             addToBot(new DaShengZiTaiAction());
         }
@@ -50,6 +50,7 @@ public class DaShengZiTai extends AbstractB1Card {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeBaseCost(0);
+            this.upgradeName();
         }
     }
 }

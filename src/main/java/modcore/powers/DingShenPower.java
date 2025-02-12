@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.EnemyMoveInfo;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import modcore.B1Mod;
 
 import java.lang.reflect.Field;
 
@@ -66,6 +67,10 @@ public class DingShenPower extends AbstractPower {
     }
 
     public void onInitialApplication() {
+        if (this.owner.state!=null)
+        {
+            this.owner.state.setTimeScale(0.0F);
+        }
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             public void update() {
                 if (DingShenPower.this.owner instanceof AbstractMonster) {
@@ -76,7 +81,7 @@ public class DingShenPower extends AbstractPower {
                         Field f = AbstractMonster.class.getDeclaredField("move");
                         f.setAccessible(true);
                         DingShenPower.this.move = (EnemyMoveInfo)f.get(DingShenPower.this.owner);
-                        EnemyMoveInfo stunMove = new EnemyMoveInfo(DingShenPower.this.moveByte,AbstractMonster.Intent.STUN, -1, 0, false);
+                        EnemyMoveInfo stunMove = new EnemyMoveInfo(DingShenPower.this.moveByte, B1Mod.DING, -1, 0, false);
                         f.set(DingShenPower.this.owner, stunMove);
                         System.out.println("-----------设置怪物意图为定身 ");
                         ((AbstractMonster)DingShenPower.this.owner).createIntent();
@@ -91,6 +96,10 @@ public class DingShenPower extends AbstractPower {
     }
 
     public void onRemove() {
+        if (this.owner.state!=null)
+        {
+            this.owner.state.setTimeScale(1.0F); // 恢复动画
+        }
         if (this.owner instanceof AbstractMonster) {
             AbstractMonster m = (AbstractMonster)this.owner;
             if (this.move != null) {

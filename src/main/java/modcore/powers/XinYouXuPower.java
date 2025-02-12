@@ -2,7 +2,7 @@ package modcore.powers;
 
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -48,10 +48,10 @@ public class XinYouXuPower extends AbstractPower
         {
             if (Settings.FAST_MODE)
             {
-                addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.amount, true));
+                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GunShiPower(AbstractDungeon.player, 1), 1));
             }else
             {
-                addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.amount));
+                addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GunShiPower(AbstractDungeon.player, 1), 1));
             }
                 flash();
         }

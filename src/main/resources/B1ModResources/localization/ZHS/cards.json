@@ -5,7 +5,7 @@
   },
   "blackmythwukong:HuoYanJinJing": {
     "NAME": "火眼金睛",
-    "DESCRIPTION": "给予1层 blackmythwukong:破绽 ,再造成 !D! 点伤害2次。",
+    "DESCRIPTION": "造成 !D! 点伤害2次,给予1层 易伤 ",
     "FLAVOR": "只是风搅得烟来，把一双眼炒红了，弄做个老害眼病，故唤作火眼金睛。"
   },
   "blackmythwukong:GunHua": {
@@ -15,8 +15,8 @@
   },
   "blackmythwukong:LongJingHuMeng": {
     "NAME": "龙精虎猛",
-    "DESCRIPTION": " 获得 blackmythwukong:棍势 层数2倍的 格挡。",
-    "UPGRADE_DESCRIPTION": "获得 blackmythwukong:棍势 层数2倍的 格挡 。 NL 获得2点临时 力量 。",
+    "DESCRIPTION": " 获得 blackmythwukong:棍势 层数2倍的 格挡。 NL 失去1点 blackmythwukong:棍势 。",
+    "UPGRADE_DESCRIPTION": "获得 blackmythwukong:棍势 层数2倍的 格挡 。",
     "EXTENDED_DESCRIPTION": [
       " NL （获得 !B! 点格挡。）"
     ]
@@ -27,45 +27,45 @@
   },
   "blackmythwukong:TieBangDangTou": {
     "NAME": "铁棒当头",
-    "DESCRIPTION": " 造成 blackmythwukong:棍势 层数 !M! 倍+6的伤害， NL 失去所有棍势 。",
-    "UPGRADE_DESCRIPTION": " 造成 blackmythwukong:棍势 层数 !M! 倍+6的伤害， NL 失去所有棍势 。",
-    "EXTENDED_DESCRIPTION": [
-      " NL （总共造成 !D! 点伤害。）"
-    ],
+    "DESCRIPTION": "造成 !D! 点伤害，将一张 *铁棒 放入你的手牌。",
     "FLAVOR": "掣铁棒，当头就打。"
   },"blackmythwukong:ShenWaiShenFa": {
   "NAME": "身外身法",
-  "DESCRIPTION": "召唤一个有 blackmythwukong:破绽 的 blackmythwukong:身外身 。 NL 消耗 。",
-  "UPGRADE_DESCRIPTION": " 固有 NL 召唤一个有 blackmythwukong:破绽 的 blackmythwukong:身外身 。 NL 消耗 。",
+  "DESCRIPTION": "唤出一个 blackmythwukong:身外身 。 NL 消耗 。",
+  "UPGRADE_DESCRIPTION": "唤出一个 blackmythwukong:身外身 ，下回合开始时再唤出一个。 NL 消耗 。",
   "FLAVOR": "分身奇术，拔一把毫毛嚼碎，望空中喷去，即变做数个毛猴。然天命人神通不全，毛猴神智未生，虽不能助力，或能助天命人积攒棍势。"
 },"blackmythwukong:FengYunZhuan": {
   "NAME": "风云转",
-  "DESCRIPTION": "对所有敌人造成 !D! 点伤害X次,本场战斗下次免费打出江海翻。",
+  "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL blackmythwukong:切手技 。",
   "FLAVOR": "大风起兮云飞扬，威加海内兮归故乡。"
 },"blackmythwukong:ChengShenZuiJi": {
   "NAME": "乘胜追击",
   "DESCRIPTION": "当前每有一名敌人，造成 !D! 点伤害。",
+  "EXTENDED_DESCRIPTION": [
+    " NL （造成 !D! 点伤害",
+    "次。）"
+  ],
   "FLAVOR": ""
 },"blackmythwukong:BeiLiWan": {
   "NAME": "倍力丸",
-  "DESCRIPTION":"每当 blackmythwukong:棍势 层数到达十层时，获得 !M! 点 力量 。",
+  "DESCRIPTION":"打出 blackmythwukong:三豆重棍 或 blackmythwukong:大圣重棍 时，额外获得 !M! 点 力量 。",
   "FLAVOR": "力微休负重，言轻莫劝人。"
 },"blackmythwukong:Dingshenfa": {
   "NAME": "定身法",
-  "DESCRIPTION": " blackmythwukong:棍势点 大于等于2时，定身敌人一回合，并消耗2个 blackmythwukong:棍势点 NL 否则获得1个 blackmythwukong:棍势点 。",
-  "UPGRADE_DESCRIPTION": " 保留 NL blackmythwukong:棍势点 大于等于2时，定身敌人一回合，并消耗2个 blackmythwukong:棍势点 NL 否则获得1个 blackmythwukong:棍势点 。",
+  "DESCRIPTION": "消耗2个 blackmythwukong:棍势点 ，定身敌人一回。 NL 若失败，获得1个 blackmythwukong:棍势点 。",
+  "UPGRADE_DESCRIPTION": " 保留 NL 消耗2个 blackmythwukong:棍势点 ，定身敌人一回。 NL 若失败，获得1个 blackmythwukong:棍势点 。",
   "FLAVOR": "摆布奇术，只需将手一指，便将对手定在原地，动弹不得。"
 },"blackmythwukong:RuZhuangJinZhong": {
   "NAME": "如撞金钟",
-  "DESCRIPTION": "获得 !B! 点 格挡 ，如果敌人未能击穿格挡，给予其一层 blackmythwukong:破绽 。",
+  "DESCRIPTION": "获得 !B! 点 格挡 ，如果敌人未能击穿格挡，给予其一层 易伤 。",
   "FLAVOR": "宁撞金钟一下，不打铙钹三千。"
 },"blackmythwukong:AnShenFa": {
   "NAME": "安身法",
-  "DESCRIPTION": "回合开始时，获得 !M! 层 棍势 ，恢复 !M! 点生命，抽 !M! 张牌，对敌人造成伤害后失效。",
+  "DESCRIPTION": "下 !M! 个回合开始时，获得3层 棍势 ，恢复2点生命，额外抽2张牌。",
   "FLAVOR": "八戒道：“师父，你原来不知。古人划地为牢。他将棍子划个圈儿，强似铁壁铜墙，假如有虎狼妖兽来时，如何挡得他住？只好白白的送与他吃罢了。”"
 },"blackmythwukong:JiangHaiFan": {
   "NAME": "江海翻",
-  "DESCRIPTION": "对所有敌人造成 !D! 点伤害。",
+  "DESCRIPTION": "对所有敌人造成 !D! 点伤害。增加1张 *后摇 到你的手牌。",
   "FLAVOR": "天命人借前势，把棒丢个撒花盖顶，恰好搅散周围的对手。"
 },"blackmythwukong:RenFanTeng": {
   "NAME": "任翻腾",
@@ -77,16 +77,17 @@
   "FLAVOR": "待来日，重获自由身，再掀澜！"
 },"blackmythwukong:QuLaiKong": {
   "NAME": "去来空",
-  "DESCRIPTION": "抽 !M! 张牌。 NL blackmythwukong:切手技 ",
+  "DESCRIPTION": "抽 !M! 张牌。 NL blackmythwukong:切手技 。",
+  "UPGRADE_DESCRIPTION": "抽 !M! 张牌，获得2点 blackmythwukong:棍势 。 NL blackmythwukong:切手技 。",
   "FLAVOR": "世事一场大梦，人生几度秋凉。"
 },"blackmythwukong:BuPoBuLi": {
   "NAME": "不破不立",
-  "DESCRIPTION": " 消耗 所有手牌，每有一张被消耗的牌获得 !M! 层 blackmythwukong:棍势 。 NL 消耗 。",
+  "DESCRIPTION": " 消耗 手中所有 *状态牌 ，如果消耗了至少 !M! 张牌，将自身 消耗 。",
   "FLAVOR": "不破不立，不塞不流，不止不行。"
 },"blackmythwukong:CaiYuanGuangJin": {
   "NAME": "财源广进",
-  "DESCRIPTION": "召唤一个有 blackmythwukong:破绽 的 blackmythwukong:广智 。 NL 消耗 。",
-  "UPGRADE_DESCRIPTION": "召唤两个有 blackmythwukong:破绽 的 blackmythwukong:广智 。 NL 消耗 。",
+  "DESCRIPTION": "唤出 blackmythwukong:广智 。 NL 消耗 。",
+  "UPGRADE_DESCRIPTION": "唤出两个 blackmythwukong:广智 。 NL 消耗 。",
   "EXTENDED_DESCRIPTION": [
     "广智救我！"
   ]
@@ -94,7 +95,7 @@
   "NAME": "凤穿花",
   "DESCRIPTION": "抽到时自动打出。 NL 对生命值最高的敌人造成 !M! 倍 blackmythwukong:棍势 层数的伤害，失去所有棍势 。",
   "UPGRADE_DESCRIPTION": "抽到时自动打出。 NL 对生命值最多的敌人造成 !M! 倍 blackmythwukong:棍势 层数加5的伤害，失去所有棍势 。",
-  "FLAVOR": "钯去好似龙伸爪，棒迎浑若凤穿花。"
+  "FLAVOR": "造成0点伤害时不会获得棍势。"
 }, "blackmythwukong:JiuMingHaoMao": {
     "NAME": "救命毫毛",
     "DESCRIPTION": "不能被打出。受致命伤时，若这张牌在手牌，免死并回到半血，移除出牌组",
@@ -147,9 +148,9 @@
     "波浪浪",
     "浪波波",
     "能被多次升级 NL 造成 !D! 点伤害两次。",
-    "给予2层 易伤 ",
-    "和 虚弱 。",
-    "给予5层 中毒 。",
+    "给予2层 易伤 。",
+    "给予5层 blackmythwukong:寒冻 ",
+    "和 中毒 。",
     "获得5层 活力 ",
     "和 blackmythwukong:铜头 ",
     "造成 !D! 点伤害两次。"
@@ -159,7 +160,7 @@
 },
   "blackmythwukong:TongTouTieBi": {
     "NAME": "铜头铁臂",
-    "DESCRIPTION": "获得 !M! 层 blackmythwukong:铜头 。 NL 这张牌每被打出一次，在本场战斗中其获得的 blackmythwukong:铜头 -1。",
+    "DESCRIPTION": "获得 !M! 层 blackmythwukong:铜头 。增加1张 *后摇 到你的手牌。",
     "FLAVOR": "当年他被押去斩妖台，刀砍斧剁，枪刺剑刺，毫发无伤，如今他用自己换回了你来……"
   },
   "blackmythwukong:ChiYao": {
@@ -175,23 +176,19 @@
   },
   "blackmythwukong:TuiChunJinChi": {
     "NAME": "退寸",
-    "DESCRIPTION": "获得 !B! 点 格挡 ，转化为 *进尺 。如果敌人的意图是攻击，你获得1层 blackmythwukong:残影 。",
-    "UPGRADE_DESCRIPTION":"无",
-    "EXTENDED_DESCRIPTION": [
-      "进尺",
-      "造成 !D! 点伤害，并转化为 *退寸 。"
-    ],
-    "FLAVOR": "求仙问卜，不如自己做主。诵佛念经，不如本事在身。"
+    "DESCRIPTION": "获得 !B! 点 格挡 ，在你的手牌中加入1张 *进尺 。",
+    "UPGRADE_DESCRIPTION":"获得 !B! 点 格挡 ，在你的手牌中加入1张 *进尺+ 。",
+    "FLAVOR": "tips:进尺视为状态牌。"
   },
-  "blackmythwukong:PreviewJinChi": {
+  "blackmythwukong:JinChi": {
     "NAME": "进尺",
-    "DESCRIPTION": "造成 !D! 点伤害，并转化为 *退寸 。"
+    "DESCRIPTION": " 保留 。被消耗时对生命值最高的敌人造成造成 !D! 点伤害， 消耗 。"
   },"blackmythwukong:PoGunShi": {
   "NAME": "破棍式",
   "DESCRIPTION": "造成 !D! 点伤害。 NL blackmythwukong:切手技 "
 },"blackmythwukong:BaJiaoShan": {
   "NAME": "芭蕉扇",
-  "DESCRIPTION": "去除所有敌人的 格挡 值，给予所有敌人 !M! 层 虚弱和1层 blackmythwukong:破绽 。 NL 消耗 。",
+  "DESCRIPTION": "去除所有敌人的 格挡 值，给予所有敌人 !M! 层 寒冻 和3层 易伤 。 NL 消耗 。",
   "FLAVOR": "火煎五漏丹难熟，火燎三关道不清。"
 },"blackmythwukong:XinYouYu": {
   "NAME": "心有余",
@@ -214,13 +211,18 @@
   "FLAVOR": "by Walt"
 },"blackmythwukong:ZhongGun": {
   "NAME": "重棍",
-  "DESCRIPTION": "失去10层 blackmythwukong:棍势 后对所有敌人造成 !D! 点伤害。",
+  "DESCRIPTION": "失去2个 blackmythwukong:棍势点 ，造成 !D! 点伤害。",
   "EXTENDED_DESCRIPTION": [
     "棍势不足，无法打出。",
-    " NL 消耗 。 NL 虚无 。",
+    " NL 消耗 。",
     "获得 [E] 。",
-    "失去13层 blackmythwukong:棍势 后对所有敌人造成 !D! 点伤害。",
-    "大圣重棍"
+    " 保留 。 NL ",
+    "二豆重棍",
+    "三豆重棍",
+    "大圣重棍",
+    "失去",
+    "个 blackmythwukong:棍势点 ，造成 !D! 点伤害。增加1张 *前摇 到你的手牌 。",
+    "获得 !M! 点 力量 。"
   ],
   "FLAVOR": "消耗棍势，竭力一击。"
 },"blackmythwukong:BieYouShiJianWeiChengJian": {
@@ -231,16 +233,17 @@
   "DESCRIPTION": "你的回合结束时, NL 获得 !M! 层 blackmythwukong:棍势 。 NL 你在这个回合不能打出 *攻击牌 。"
 },"blackmythwukong:TuNa": {
   "NAME": "吐纳绵长",
-  "DESCRIPTION": "抽 !M! 张牌,每有1个敌人少抽1张牌 ",
+  "DESCRIPTION": "抽 !M! 张牌,每有1个敌人就少抽1张牌，转而获得1 [E] 。",
   "EXTENDED_DESCRIPTION": [
-    "敌人过多，无法抽牌。",
     "（抽",
-    "张牌）"
+    "张牌，获得 ",
+    "[E] ",
+    "）"
   ]
 },"blackmythwukong:KanPo": {
   "NAME": "识破",
-  "DESCRIPTION": "如果敌人意图是攻击， NL 消耗1个 blackmythwukong:棍势点 ，将攻击伤害转化为状态牌。",
-  "UPGRADE_DESCRIPTION":"如果敌人的意是攻击， NL 消耗1个 blackmythwukong:棍势点 ，将攻击伤害转化为状态牌。失败时，给予敌人1层 blackmythwukong:破绽 。",
+  "DESCRIPTION": "如果敌人意图是攻击， NL 消耗1个 blackmythwukong:棍势点 ，将攻击伤害转化为 *状态牌 。",
+  "UPGRADE_DESCRIPTION":"如果敌人意图是攻击， NL 消耗1个 blackmythwukong:棍势点 ，将攻击伤害转化为 *状态牌 。",
   "FLAVOR": "“识破对手出招后打出重棍，能化解攻击，抵消伤害。”来自一名优秀员工 "
 },"blackmythwukong:MonsterDamage": {
   "NAME": "敌人将造成的伤害",
@@ -248,7 +251,7 @@
   "EXTENDED_DESCRIPTION": [
     "回合结束时，如果这张牌未被你主动消耗，你将受到",
     " 点伤害 ",
-    " 次。 NL 打出 blackmythwukong:重棍 时将此牌 消耗 。"
+    " 次。"
   ],
   "FLAVOR": "“识破对手出招后打出重棍，能化解攻击，抵消伤害。”来自一名优秀员工 "
 },"blackmythwukong:JuXingSanQi": {
@@ -262,7 +265,7 @@
   "FLAVOR": "弥勒将右手食指蘸着口中神水，在行者掌上写了一个禁字。"
 },"blackmythwukong:YaKui": {
   "NAME": "压溃",
-  "DESCRIPTION": "消耗所有 blackmythwukong:棍势点 ，每有一个，造成 !D! 点伤害 ",
+  "DESCRIPTION": "造成 !D! 点伤害，若没有 斩杀 敌人，消耗1个 blackmythwukong:棍势点 ，再打出一次。",
   "EXTENDED_DESCRIPTION": [
     " NL （造成 !D! 点伤害 !M! 次。）"
   ],
@@ -271,7 +274,7 @@
   "NAME": "蛇捕头",
   "DESCRIPTION": "失去 !B! 点格挡， NL 获得1层 脆弱 ， NL 造成 !D! 点伤害 ",
   "UPGRADE_DESCRIPTION":" 获得1层 脆弱 ， NL 造成 !D! 点伤害",
-  "FLAVOR": ""
+  "FLAVOR": "过了些时日，老虎的脖颈变得又细又长，再也不能说话了，整日很勤奋地在空心林中巡视。大家私底下议论道：“他学道虎头蛇尾，师父定是对他做了些惩处，他才变成这般模样，以后我们都得小心才是。”"
 },"blackmythwukong:BuYouJi": {
   "NAME": "不由己",
   "DESCRIPTION": "在手牌中时，你无法打出其他牌。",
@@ -286,7 +289,7 @@
   "FLAVOR": "没了放不下的人，就没有过不去的事。"
 },"blackmythwukong:JiaoGun": {
   "NAME": "搅阵",
-  "DESCRIPTION": "消耗一层 blackmythwukong:棍势 后，造成 !D! 点伤害，并将此牌的复制加入手牌。",
+  "DESCRIPTION": " 虚无 。 NL 消耗一层 blackmythwukong:棍势 后，造成 !D! 点伤害，并将此牌的复制加入手牌。",
   "EXTENDED_DESCRIPTION": [
     "我没有棍势。"
   ],
@@ -298,15 +301,15 @@
 },"blackmythwukong:XingHongXian": {
   "NAME": "兴烘掀·掀烘兴",
   "DESCRIPTION": "随机造成 !D! 点伤害 !M! 次，每击中一个不同敌人，获得 !B! 点 格挡 。",
-  "FLAVOR": ""
+  "FLAVOR": "貌美娘子恶丑郎，犄角獠牙配浓妆。 NL 鸳鸯盾里成双对，滚落红尘把命偿。"
 },"blackmythwukong:DaShengZiTai": {
   "NAME": "大圣姿态",
-  "DESCRIPTION": " blackmythwukong:重棍 造成的伤害翻倍。 blackmythwukong:棍势 层数上限提升至13并获得一个额外的棍势槽。",
+  "DESCRIPTION": "获得一个额外的棍势槽，当达到4豆时，可以施展 blackmythwukong:大圣重棍 。",
   "FLAVOR": ""
 },"blackmythwukong:JinDouYun": {
   "NAME": "筋斗云",
-  "DESCRIPTION": "抽牌，直至抽到被选中的牌。如果手牌被抽满，则在这个回合内不能再抽任何牌。 NL 消耗 。",
-  "UPGRADE_DESCRIPTION":"抽牌，直至抽到被选中的牌。如果手牌被抽满，则在这个回合内不能再抽任何牌。",
+  "DESCRIPTION": "抽牌，直至抽到被选中的牌。如果手牌被抽满，则在这个回合内不能再抽任何牌。",
+  "UPGRADE_DESCRIPTION":" 固有 。 NL 抽牌，直至抽到被选中的牌。如果手牌被抽满，则在这个回合内不能再抽任何牌。",
   "FLAVOR": "生翅有何稀奇，此物才是第一。"
 },"blackmythwukong:JinGuBang": {
   "NAME": "如意金箍棒",
@@ -319,12 +322,62 @@
   "FLAVOR": ""
 },"blackmythwukong:YueYuTu": {
   "NAME": "月玉兔",
-  "DESCRIPTION": "与日金乌之间所有的手牌获得 保留 效果。相遇时，对所有敌人造成15点伤害。 NL 保留 。",
-  "UPGRADE_DESCRIPTION":"与日金乌之间所有手牌获得 保留 效果。相遇时，对所有敌人造成20点伤害。 NL 保留 。",
+  "DESCRIPTION": " 保留 。 NL 与日金乌之间所有的手牌获得 保留 效果。相遇时，对所有敌人造成15点伤害。",
+  "UPGRADE_DESCRIPTION":" 保留 。 NL 与日金乌之间所有手牌获得 保留 效果。相遇时，对所有敌人造成20点伤害。",
   "FLAVOR": ""
 },"blackmythwukong:RiJingWu": {
   "NAME": "日金乌",
-  "DESCRIPTION": "与月玉兔之间所有的手牌获得 保留 效果。相遇时，将二者消耗。 NL 保留 。",
+  "DESCRIPTION": " 保留 。 NL 与月玉兔之间所有的手牌获得 保留 效果。相遇时，将二者消耗。",
   "FLAVOR": ""
+},"blackmythwukong:YaXiangKe": {
+  "NAME": "鸦香客",
+  "DESCRIPTION": "给予 !M! 层 blackmythwukong:寒冻 。",
+  "FLAVOR": "小西天的鸦香客相比在黑风山里的，多习得了冰冻和隐身法术。"
+},"blackmythwukong:WuLiangFu": {
+  "NAME": "无量蝠",
+  "DESCRIPTION": "随机给予敌人3层 blackmythwukong:寒冻 !M! 次。",
+  "FLAVOR": "寄身佛像中，鼓翅可乘风。 NL 铁心多劳碌，金身享华荣。"
+},"blackmythwukong:YunLiWu": {
+  "NAME": "云里雾",
+  "DESCRIPTION": "造成 !D! 点伤害，被选中时会和随机手牌交换位置，并切换为雾里云。",
+  "UPGRADE_DESCRIPTION":"",
+  "EXTENDED_DESCRIPTION": [
+    "云里雾",
+    "雾里云",
+    "给予所有敌人 !M! 层 blackmythwukong:寒冻 ，被选中时会和随机手牌交换位置，并切换为云里雾。"
+  ],
+  "FLAVOR": "大王好，大王秒，大王让你命难逃！"
+},"blackmythwukong:PreviewWuLiYun": {
+  "NAME": "雾里云",
+  "DESCRIPTION": "给予所有敌人 !M! 层 blackmythwukong:寒冻 ，被选中时会和随机手牌交换位置，并切换为云里雾。",
+  "FLAVOR": ""
+},"blackmythwukong:ZhiQu": {
+  "NAME": "直取",
+  "DESCRIPTION": " 固有 。 NL 给予1层 blackmythwukong:破绽 ,再造成 !D! 点。",
+  "FLAVOR": ""
+},"blackmythwukong:YaQianYouGuai": {
+  "NAME": "崖前有怪石双双",
+  "DESCRIPTION": "唤出一个 blackmythwukong:石双双 ，每当 blackmythwukong:石双双 因你的攻击而失去生命时，你获得1点 [E] 。 NL 消耗 。",
+  "FLAVOR": "石母用青石英仿照自己当年的模样，化生出了石双双"
+},"blackmythwukong:WuFengNongXue": {
+  "NAME": "舞风弄雪",
+  "DESCRIPTION": "给予 !M! 层 blackmythwukong:寒冻 ，本回合敌人的 blackmythwukong:寒冻 层数不再减少，你的每次攻击都会造成冻伤。 NL 消耗 。",
+  "FLAVOR": ""
+},"blackmythwukong:BaiLianWu": {
+  "NAME": "白练舞",
+  "DESCRIPTION": "从手牌中选择最多3张技能牌，使它们每次打出后，给予随机敌人两层 blackmythwukong:寒冻 。 消耗 。",
+  "FLAVOR": ""
+},"blackmythwukong:HouYao": {
+  "NAME": "后摇",
+  "DESCRIPTION": "如果这张牌被消耗，抽1张牌。 消耗 。",
+  "FLAVOR": ""
+},"blackmythwukong:QianYao": {
+  "NAME": "前摇",
+  "DESCRIPTION": "不能被打出。 NL 如果这张牌与 *状态牌 相邻，将状态牌和自身 消耗 。",
+  "FLAVOR": ""
+},"blackmythwukong:TieBang": {
+"NAME": "铁棒",
+"DESCRIPTION": "如果这张牌被消耗，获得 [E] [E] 。 消耗 。",
+"FLAVOR": ""
 }
 }

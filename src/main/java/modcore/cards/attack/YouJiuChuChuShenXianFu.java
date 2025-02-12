@@ -60,6 +60,7 @@ public class YouJiuChuChuShenXianFu extends AbstractB1Card {
             }
         }
         this.costForTurn=Ecost;
+        this.attackCount=Ecost;
     }
     @Override
     public void upgrade() {

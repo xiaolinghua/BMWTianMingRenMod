@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import modcore.Characters.WuKong;
 import modcore.actions.CreateSlot;
 import modcore.cards.attack.*;
+import modcore.cards.other.*;
 import modcore.cards.power.*;
 import modcore.cards.skill.*;
 import modcore.monsters.KuiLei;
@@ -55,7 +56,10 @@ public class B1Mod implements EditCardsSubscriber, SaveLoadSubscriber, EditStrin
     public static SpireConfig config = null;
     @SpireEnum
     public static AbstractCard.CardTags FENSHEN;
+    @SpireEnum
     public static AbstractCard.CardTags QieShouJi;
+    @SpireEnum
+    public static AbstractMonster.Intent DING;
     public static ArrayList<showsOrb> MyOrblist = new ArrayList<>();
 
     public static final Color B1_COLOR = new Color(196.0F / 230.0F, 145.0F / 179.0F, 69.0F / 90.0F, 1.0F);
@@ -106,14 +110,14 @@ public class B1Mod implements EditCardsSubscriber, SaveLoadSubscriber, EditStrin
         BaseMod.addCard(new ChiYao());
         BaseMod.addCard(new DingXiCunShen());
         BaseMod.addCard(new TuiChunJinChi());
-        //BaseMod.addCard(new PreviewJinChi());
+        BaseMod.addCard(new JinChi());
         BaseMod.addCard(new PoGunShi());
         BaseMod.addCard(new BaJiaoShan());
         BaseMod.addCard(new XinYouYu());
         BaseMod.addCard(new TianDiQing());
         BaseMod.addCard(new JiaWeiChanShiWan());
         BaseMod.addCard(new GongShiPengPai());
-        BaseMod.addCard(new ZhanGunShi());
+        //BaseMod.addCard(new ZhanGunShi());
         BaseMod.addCard(new ZhongGun());
         BaseMod.addCard(new BieYouShiJianWeiChengJian());
         BaseMod.addCard(new XuLi());
@@ -124,7 +128,7 @@ public class B1Mod implements EditCardsSubscriber, SaveLoadSubscriber, EditStrin
         BaseMod.addCard(new JinZiFa());
         BaseMod.addCard(new YaKui());
         BaseMod.addCard(new SheBuTou());
-        //BaseMod.addCard(new BuYouJi());
+        BaseMod.addCard(new BuYouJi());
         BaseMod.addCard(new BuYouTian());
         BaseMod.addCard(new JiaoGun());
         BaseMod.addCard(new ShanShen());
@@ -135,6 +139,16 @@ public class B1Mod implements EditCardsSubscriber, SaveLoadSubscriber, EditStrin
         BaseMod.addCard(new WuTing());
         BaseMod.addCard(new YueYuTu());
         BaseMod.addCard(new RiJingWu());
+        BaseMod.addCard(new YaXiangKe());
+        BaseMod.addCard(new WuLiangFu());
+        BaseMod.addCard(new YunLiWu());
+        //BaseMod.addCard(new ZhiQu());
+        BaseMod.addCard(new YaQianYouGuai());
+        BaseMod.addCard(new WuFengNongXue());
+        BaseMod.addCard(new BaiLianWu());
+        BaseMod.addCard(new HouYao());
+        BaseMod.addCard(new QianYao());
+        BaseMod.addCard(new TieBang());
     }
     public void receiveAddAudio() {
         BaseMod.addAudio("B1:OPENING", "B1ModResources/audio/begin.mp3");
@@ -155,6 +169,12 @@ public class B1Mod implements EditCardsSubscriber, SaveLoadSubscriber, EditStrin
         BaseMod.addAudio("B1:DaShengYuYin1", "B1ModResources/audio/DaShengYuYin1.mp3");
         BaseMod.addAudio("B1:DaShengYuYin2", "B1ModResources/audio/DaShengYuYin2.mp3");
         BaseMod.addAudio("B1:DaShengYuYin3", "B1ModResources/audio/DaShengYuYin3.mp3");
+        BaseMod.addAudio("B1:TongGuan", "B1ModResources/audio/TongGuan.mp3");
+        BaseMod.addAudio("B1:WuLiYun1", "B1ModResources/audio/WuLiYun1.MP3");
+        BaseMod.addAudio("B1:WuLiYun2", "B1ModResources/audio/WuLiYun2.MP3");
+        BaseMod.addAudio("B1:WuLiYun3", "B1ModResources/audio/WuLiYun3.MP3");
+        BaseMod.addAudio("B1:2Dou", "B1ModResources/audio/2Dou.mp3");
+        BaseMod.addAudio("B1:3Dou", "B1ModResources/audio/3Dou.mp3");
     }
 
     @Override
@@ -201,6 +221,7 @@ public class B1Mod implements EditCardsSubscriber, SaveLoadSubscriber, EditStrin
         BaseMod.addRelicToCustomPool(new LingTaiYaoMiao(), BMW_CARD);
         BaseMod.addRelicToCustomPool(new ShenBenYou(), BMW_CARD);
         BaseMod.addRelicToCustomPool(new YanKanXi(), BMW_CARD);
+        BaseMod.addRelicToCustomPool(new YiJianYu(), BMW_CARD);
     }
     public void receiveEditStrings() {
         String lang;

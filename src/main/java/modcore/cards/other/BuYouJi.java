@@ -9,8 +9,6 @@ import modcore.Patches.AbstractB1Card;
 
 import java.util.Objects;
 
-import static modcore.Characters.WuKong.Enums.BMW_CARD;
-
 public class BuYouJi extends AbstractB1Card {
     public static final String ID = "blackmythwukong:BuYouJi";
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
@@ -21,8 +19,8 @@ public class BuYouJi extends AbstractB1Card {
     // private static final String DESCRIPTION = "造成 !D! 点伤害。";
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述
     private static final CardType TYPE = CardType.STATUS;
-    private static final CardColor COLOR = BMW_CARD;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardColor COLOR =CardColor.COLORLESS;
+    private static final CardRarity RARITY = CardRarity.CURSE;
     private static final CardTarget TARGET = CardTarget.NONE;
 
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)

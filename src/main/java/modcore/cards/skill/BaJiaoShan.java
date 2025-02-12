@@ -1,6 +1,5 @@
 package modcore.cards.skill;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,9 +7,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import modcore.Patches.AbstractB1Card;
-import modcore.powers.PoZhanPower;
+import modcore.powers.HanDongPower;
 import modcore.utils.SfxUtil;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
@@ -32,7 +31,7 @@ public class BaJiaoShan extends AbstractB1Card
     public BaJiaoShan() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -43,8 +42,8 @@ public class BaJiaoShan extends AbstractB1Card
         for (AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters)
         {
             addToBot(new RemoveAllBlockAction(mo, p));
-            addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-            addToBot(new ApplyPowerAction(mo, p, new PoZhanPower(mo,1)));
+            addToBot(new ApplyPowerAction(mo, p, new HanDongPower(mo, magicNumber)));
+            addToBot(new ApplyPowerAction(m,p, new VulnerablePower(m,3,false)));
         }
     }
 

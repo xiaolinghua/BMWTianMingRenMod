@@ -1,14 +1,12 @@
 package modcore.cards.attack;
 
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import modcore.Patches.AbstractB1Card;
+import modcore.actions.YaKuiAction;
 import modcore.utils.SfxUtil;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
@@ -19,7 +17,7 @@ public class YaKui extends AbstractB1Card {
     // private static final String NAME = "打击";
     private static final String NAME = CARD_STRINGS.NAME; // 读取本地化的名字
     private static final String IMG_PATH = "B1ModResources/images/cards/YaKui.png";
-    private static final int COST = 0;
+    private static final int COST = 1;
     // private static final String DESCRIPTION = "造成 !D! 点伤害。";
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述
     private static final CardType TYPE = CardType.ATTACK;
@@ -37,52 +35,8 @@ public class YaKui extends AbstractB1Card {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         sfxUtil.playSFX();
-        if (AbstractDungeon.player.hasPower("blackmythwukong:GunShi"))
-        {
-            int amount=AbstractDungeon.player.getPower("blackmythwukong:GunShi").amount;
-            if (amount >= 3 && amount < 6)
-            {
-                addToBot(new ReducePowerAction(p, p, "blackmythwukong:GunShi",3));
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-            }
-            else if (amount >= 6 && amount < 9)
-            {
-                addToBot(new ReducePowerAction(p, p, "blackmythwukong:GunShi",6));
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-            }
-            else if (amount >= 9&& amount < 12)
-            {
-                addToBot(new ReducePowerAction(p, p, "blackmythwukong:GunShi",9));
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-            }
-            else if (amount >= 12)
-            {
-                addToBot(new ReducePowerAction(p, p, "blackmythwukong:GunShi",12));
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
-            }
-        }
-
+        addToBot(new YaKuiAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL)));
     }
-    public void applyPowers()
-    {
-        int orbNum=0;
-        if (AbstractDungeon.player.hasPower("blackmythwukong:GunShi"))
-        {
-            orbNum=AbstractDungeon.player.getPower("blackmythwukong:GunShi").amount/3;
-
-        }
-        this.magicNumber = this.baseMagicNumber=orbNum;
-        super.applyPowers();
-        this.rawDescription = CARD_STRINGS.DESCRIPTION + CARD_STRINGS.EXTENDED_DESCRIPTION[0];
-        this.initializeDescription();
-    }
-
     @Override
     public void upgrade() {
         if (!this.upgraded) {

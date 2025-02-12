@@ -1,5 +1,6 @@
 package modcore.cards.skill;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -7,6 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import modcore.B1Mod;
 import modcore.Patches.AbstractB1Card;
+import modcore.powers.GunShiPower;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
 
@@ -33,6 +35,10 @@ public class QuLaiKong extends AbstractB1Card {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         addToBot(new DrawCardAction(p, this.magicNumber));
+        if (this.upgraded)
+        {
+            this.addToBot(new ApplyPowerAction(p, p, new GunShiPower(p, 2), 2));
+        }
     }
 
 
@@ -40,7 +46,9 @@ public class QuLaiKong extends AbstractB1Card {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            // 加上以下两行就能使用UPGRADE_DESCRIPTION了（如果你写了的话）
+            this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 }

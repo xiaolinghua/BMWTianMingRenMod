@@ -22,7 +22,7 @@ public class JinBi extends AbstractMonster {
     public static final String NAME = monsterStrings.NAME;
 
     public JinBi(float x, float y) {
-        super(NAME, ID, 10, 0.0F, -24.0F, 130.0F, 200.0F, null, x, y);
+        super(NAME, ID, 4, 0.0F, -24.0F, 130.0F, 200.0F, null, x, y);
         setHp(4, 4);
         this.damage.add(new DamageInfo(this, 0));
         this.img=new Texture("B1ModResources/images/monsters/JinBi.png");
@@ -40,7 +40,7 @@ public class JinBi extends AbstractMonster {
         }
     }
     protected void getMove(int num) {
-        setMove((byte)1, Intent.STUN, this.damage.get(0).base);
+        setMove((byte)1, Intent.NONE, this.damage.get(0).base);
     }
 
 

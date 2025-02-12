@@ -29,6 +29,7 @@ public class LuanDianTianGong extends AbstractB1Card {
         this.damage = this.baseDamage = 3;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
+        this.attackCount = 3;
     }
 
     @Override
@@ -44,6 +45,7 @@ public class LuanDianTianGong extends AbstractB1Card {
         if (!this.upgraded) {
             this.upgradeName();
             upgradeMagicNumber(1);
+            this.attackCount++;
         }
     }
 }

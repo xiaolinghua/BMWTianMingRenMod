@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 
 public class RuZhuangJinZhongPower extends AbstractPower
@@ -55,26 +56,12 @@ public class RuZhuangJinZhongPower extends AbstractPower
             addToBot(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
         }
     }
-    /*
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner && damageAmount <= 0 && info.output > 0)
-        {
-            flash();
-            addToTop(new ApplyPowerAction(info.owner,this.owner,new PoZhanPower(info.owner,1)));
-            if (!hasSpoken)
-            {
-                addToBot(new TalkAction(info.owner, "好个铜头", 1.2F, 2F));
-            }
-        }
-        return damageAmount;
-    }
 
-     */
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner && damageAmount <= 0 && info.output > 0)
         {
             flash();
-            addToBot(new ApplyPowerAction(info.owner, this.owner, new PoZhanPower(info.owner, 1)));
+            addToBot(new ApplyPowerAction(info.owner, info.owner, new VulnerablePower(info.owner,1,true)));
             // 检查攻击者是否已更改
             if (lastAttacker != info.owner) {
                 // 攻击者已更改，重置已播放标志

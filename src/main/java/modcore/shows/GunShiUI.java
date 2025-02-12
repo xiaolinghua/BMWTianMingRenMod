@@ -2,12 +2,15 @@ package modcore.shows;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
+import modcore.Patches.AbstractB1Card;
+import modcore.powers.GunShiPower;
 
 
 public class GunShiUI extends AbstractPanel
@@ -18,9 +21,9 @@ public class GunShiUI extends AbstractPanel
     private static final float PANEL_X = 100.0F * Settings.scale; // 面板X坐标
     private static final float PANEL_Y = Settings.HEIGHT / 2.0F - ICON_W * 2.0F - PAD; // 面板Y坐标
     //private static final float X =Settings.scale*572;
-    private static final float X =AbstractDungeon.player.drawX + 110.0F;
+    private static float X =AbstractDungeon.player.drawX + 110.0F;
     //private static final float Y = (float) Settings.HEIGHT /((float) 1200 /439);
-    private static final float Y = AbstractDungeon.player.drawY +100F;
+    private static float Y = AbstractDungeon.player.drawY +100F;
     // 定义一些私有成员变量，用于存储UI元素的状态和属性
     private final Color color; // 颜色
     private final Color redColor = new Color(1.0F, 0.0F, 0.0F, 1.0F);
@@ -35,6 +38,8 @@ public class GunShiUI extends AbstractPanel
 
     // 更新方法，用于处理面板的动画和交互逻辑
     public void update(float hbAlpha) {
+        X=AbstractDungeon.player.drawX + 110.0F;
+        Y=AbstractDungeon.player.drawY +100F;
         // 更新面板位置（如果目标位置与当前位置不同）
         if (this.target_x != this.current_x) this.current_x = this.target_x;
         if (this.target_y != this.current_y) this.current_y = this.target_y;
@@ -48,9 +53,12 @@ public class GunShiUI extends AbstractPanel
 
         if (CardCrawlGame.isInARun() && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom() != null && (AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT&&"tianmingren".equals(AbstractDungeon.player.name))
         {
-            // 设置绘制颜色
-            //sb.setColor(this.color);
-            if (!AbstractDungeon.player.hasPower("blackmythwukong:GunShi"))
+            if (AbstractDungeon.player.hoveredCard != null && AbstractDungeon.player.hoveredCard.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hoveredCard instanceof AbstractB1Card)
+            {
+                int attackCount = AbstractDungeon.player.hoveredCard.target == AbstractCard.CardTarget.ALL_ENEMY ? AbstractDungeon.getMonsters().monsters.size() : ((AbstractB1Card) AbstractDungeon.player.hoveredCard).attackCount;
+                FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, "+"+attackCount, X, Y+50F, Settings.GREEN_TEXT_COLOR);
+            }
+            if (!AbstractDungeon.player.hasPower(GunShiPower.POWER_ID))
             {
                 Color c;
                 c = this.redColor;
@@ -62,14 +70,8 @@ public class GunShiUI extends AbstractPanel
                 Color c;
                 c = this.greenColor;
                 sb.setColor(c);
-                FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, String.valueOf(AbstractDungeon.player.getPower("blackmythwukong:GunShi").amount), X, Y, Settings.GOLD_COLOR);
+                FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, String.valueOf(AbstractDungeon.player.getPower(GunShiPower.POWER_ID).amount), X, Y, Settings.GOLD_COLOR);
             }
-            /* 计算图标绘制参数
-            FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont,
-                    String.format(!AbstractDungeon.player.hasPower("blackmythwukong:GunShi") ? "0" : String.valueOf(AbstractDungeon.player.getPower("blackmythwukong:GunShi").amount)),
-                    X, Y, Settings.LIGHT_YELLOW_COLOR);
-
-             */
         }
     }
 

@@ -30,8 +30,8 @@ public class KuiLeiShuPower extends AbstractPower
         this.amount = -1;
 
         // 添加一大一小两张能力图
-        String path128 = "B1ModResources/images/powers/Popularity84.png";
-        String path48 = "B1ModResources/images/powers/Popularity32.png";
+        String path128 = "B1ModResources/images/powers/HaoMao84.png";
+        String path48 = "B1ModResources/images/powers/HaoMao32.png";
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path48), 0, 0, 32, 32);
 
@@ -39,13 +39,11 @@ public class KuiLeiShuPower extends AbstractPower
         this.updateDescription();
     }
 
-    public float atDamageFinalReceive(float damage, DamageInfo.DamageType type) {
-        if (damage > 1.0F) {
-            damage = 1.0F;
-        }
-        return damage;
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount)
+    {
+        damageAmount = 1;
+        return damageAmount;
     }
-
     // 能力在更新时如何修改描述
     public void updateDescription() {
         this.description = String.format(DESCRIPTIONS[0]); // 这样，%d就被替换成能力的层数

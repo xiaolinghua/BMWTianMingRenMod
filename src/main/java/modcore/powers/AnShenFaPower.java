@@ -3,8 +3,7 @@ package modcore.powers;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -29,10 +28,8 @@ public class AnShenFaPower extends AbstractPower
         this.ID = POWER_ID;
         this.owner = owner;
         this.type = PowerType.BUFF;
-
         // 如果需要不能叠加的能力，只需将上面的Amount参数删掉，并把下面的Amount改成-1就行
         this.amount = Amount;
-
         // 添加一大一小两张能力图
         String path128 = "B1ModResources/images/powers/AnShenFaPower84.png";
         String path48 = "B1ModResources/images/powers/AnShenFaPower32.png";
@@ -44,24 +41,18 @@ public class AnShenFaPower extends AbstractPower
 
     public void atStartOfTurnPostDraw()
     {
-         flash();
-         addToBot(new DrawCardAction(this.owner, this.amount));
-        addToBot(new ApplyPowerAction(this.owner, this.owner, new GunShiPower(this.owner, this.amount), this.amount));
+        flash();
+        addToBot(new DrawCardAction(this.owner, 2));
+        addToBot(new ApplyPowerAction(this.owner, this.owner, new GunShiPower(this.owner, 3), 3));
         if (this.owner.currentHealth > 0)
         {
-            this.owner.heal(this.amount);
+            this.owner.heal(2);
         }
+        addToBot(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
     }
-    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target)
-    {
-         if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL)
-         {
-             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
-         }
-    }
-
     // 能力在更新时如何修改描述
-    public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0])+ this.amount+String.format(DESCRIPTIONS[1])+ this.amount+String.format(DESCRIPTIONS[2])+ this.amount+String.format(DESCRIPTIONS[3]);
+    public void updateDescription()
+    {
+        this.description = String.format(DESCRIPTIONS[0]) + this.amount + String.format(DESCRIPTIONS[1]);
     }
 }

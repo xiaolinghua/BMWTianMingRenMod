@@ -1,10 +1,7 @@
 package modcore.powers;
 
-import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,7 +9,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import modcore.cardmods.CanNotGetGunShiMod;
 
 public class PoZhanPower extends AbstractPower
 {
@@ -43,20 +39,6 @@ public class PoZhanPower extends AbstractPower
 
         // 首次添加能力更新描述
         this.updateDescription();
-    }
-
-    public int onAttacked(DamageInfo info, int damageAmount)
-    {
-        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
-            AbstractPlayer p = AbstractDungeon.player;
-            if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && CardModifierManager.hasModifier(AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1), CanNotGetGunShiMod.ID))
-            {
-                return damageAmount;
-            }
-            this.flash();
-            this.addToTop(new ApplyPowerAction(p, p, new GunShiPower(p, 1), 1));
-        }
-        return damageAmount;
     }
     public void stackPower(int stackAmount)
     {

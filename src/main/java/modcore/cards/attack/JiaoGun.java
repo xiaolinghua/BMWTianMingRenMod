@@ -37,6 +37,8 @@ public class JiaoGun extends AbstractB1Card {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.damage = this.baseDamage = 4;
         CardModifierManager.addModifier(this, new CanNotGetGunShiMod());
+        this.isEthereal = true;
+        this.attackCount = 0;
     }
 
     @Override

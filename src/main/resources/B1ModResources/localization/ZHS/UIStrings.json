@@ -7,7 +7,7 @@
   },
   "blackmythwukong:CanNotGetGunShiMod": {
     "TEXT": [
-      "blackmythwukong:绝念 。 NL ",
+      "blackmythwukong:绝念 。",
       ""
     ]
   },"JinDouYunAction": {
@@ -18,6 +18,15 @@
   "TEXT": [
     " 保留 。 NL ",
     ""
+  ]
+},"blackmythwukong:FrozenCardMod": {
+  "TEXT": [
+    "blackmythwukong:白练舞 。 NL ",
+    ""
+  ]
+},"BaiLianWuAction": {
+  "TEXT": [
+    "选择至多3张技能牌，为它们添加打出后随机施加寒冻的效果。"
   ]
 }
 }

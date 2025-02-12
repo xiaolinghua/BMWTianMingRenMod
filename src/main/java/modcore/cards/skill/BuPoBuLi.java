@@ -1,11 +1,13 @@
 package modcore.cards.skill;
 
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import modcore.Patches.AbstractB1Card;
-import modcore.actions.BuPoBuLiAction;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
 
@@ -18,21 +20,30 @@ public class BuPoBuLi extends AbstractB1Card {
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述
     private static final CardType TYPE = CardType.SKILL;
     private static final CardColor COLOR = BMW_CARD;
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     //调用父类的构造方法，传参为super(卡牌ID,卡牌名称，能量花费，卡牌描述，卡牌类型，卡牌颜色，卡牌稀有度，卡牌目标)
     public BuPoBuLi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock =5;
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        addToBot(new BuPoBuLiAction(baseMagicNumber));
+        int count = 0;
+        for (AbstractCard card : AbstractDungeon.player.hand.group)
+        {
+            if (card.type == AbstractCard.CardType.STATUS)
+            {
+                this.addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
+                count++;
+            }
+        }
+        if (count >= this.magicNumber) {
+            this.addToBot(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
+        }
     }
 
 

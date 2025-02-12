@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import modcore.Patches.AbstractB1Card;
+import modcore.Patches.card.ChangeIntentPatch;
 import modcore.cards.other.MonsterDamage;
 import modcore.powers.MonsterDamagePower;
-import modcore.powers.PoZhanPower;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
 import static modcore.utils.PowerIDUtil.*;
@@ -53,13 +53,7 @@ public class KanPo extends AbstractB1Card{
             printExtraPowerID();
             addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new MonsterDamagePower(AbstractDungeon.player,getSourceExtraPowerID(),m.getIntentDmg(),damageTime)));
             printExtraPowerID();
-
-            m.setMove((byte)-23, AbstractMonster.Intent.ATTACK, 0);
-            m.createIntent();
-        }
-        else if(this.upgraded)
-        {
-            addToBot(new ApplyPowerAction(m, p, new PoZhanPower(m,1)));
+            ChangeIntentPatch.changeIntentAttack(m, 0);
         }
     }
 

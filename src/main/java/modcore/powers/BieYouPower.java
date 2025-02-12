@@ -49,13 +49,6 @@ public class BieYouPower extends AbstractPower
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead())
         {
             this.flash();
-/*
-            for (Map.Entry<String, String> entry : UnlockTracker.seenPref.data.entrySet())
-            {
-                System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
-            }
-
- */
             for (AbstractCard card:CardLibrary.getCardList(TianMingRen_LIBRARY))
             {
                 if (!UnlockTracker.isCardSeen(card.cardID))

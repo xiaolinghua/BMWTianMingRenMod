@@ -2,6 +2,7 @@ package modcore.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -42,6 +43,7 @@ public class YanKanXi extends CustomRelic
             }
         }
         flash();
+        addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToBot(new GainBlockAction(AbstractDungeon.player, null, count));
     }
 }

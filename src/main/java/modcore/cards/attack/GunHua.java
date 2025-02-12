@@ -29,14 +29,13 @@ public class GunHua extends AbstractB1Card {
         this.damage = this.baseDamage = 2;
         this.magicNumber=this.baseMagicNumber = 3;
         this.exhaust = true;
+        this.attackCount = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m)//to do :打出没效果
     {
-        System.out.println("棍花已用");
         for (int i = 0; i < this.magicNumber; i++)
         {
-            System.out.println("进入循环");
             addToBot(new GunHuaAction(m,new DamageInfo(p,this.damage,DamageInfo.DamageType.NORMAL)));
         }
     }

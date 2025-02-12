@@ -29,5 +29,11 @@
   "DESCRIPTIONS": [
     "在你的回合结束时，每有一个身外身或敌人，获得 #b1 点 #y格挡 。"
   ]
+},"blackmythwukong:YiJianYu": {
+  "NAME": "意见欲",
+  "FLAVOR": "通圣通灵，长夜难明。",
+  "DESCRIPTIONS": [
+    "每当你攻击命中一个敌人时，你获得1点 #y棍势。 NL 每当你因敌人的攻击而失去生命时，你失去1点 #y棍势。"
+  ]
 }
 }

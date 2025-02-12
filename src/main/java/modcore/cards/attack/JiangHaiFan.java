@@ -2,7 +2,7 @@ package modcore.cards.attack;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import modcore.Patches.AbstractB1Card;
+import modcore.cards.other.HouYao;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
 
@@ -31,24 +32,13 @@ public class JiangHaiFan extends AbstractB1Card {
     public JiangHaiFan() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 15;
-    }
-    @Override
-    public boolean freeToPlay()
-    {
-        super.freeToPlay();
-        if (AbstractDungeon.player!=null)
-        {
-            AbstractPlayer p = AbstractDungeon.player;
-            return p.hasPower("blackmythwukong:FengYunZhuanPower");
-        }
-        else
-            return super.freeToPlay();
+        this.cardsToPreview = new HouYao();
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(baseDamage, false), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, "blackmythwukong:FengYunZhuanPower"));
+        addToBot(new MakeTempCardInHandAction(new HouYao()));
     }
     public void triggerOnGlowCheck()
     {

@@ -13,9 +13,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import modcore.Patches.AbstractB1Card;
+import modcore.powers.HanDongPower;
 import modcore.powers.TongTouPower;
 
 import java.util.Random;
@@ -69,7 +69,7 @@ public class XiaoGuaGua extends AbstractB1Card {
         }
         if (timesUpgraded>=3)
         {
-            addToBot(new ApplyPowerAction(m, p, new WeakPower(m, 2, false),2));
+            addToBot(new ApplyPowerAction(m, p, new HanDongPower(m, 5),5));
         }
         if (timesUpgraded>=4)
         {

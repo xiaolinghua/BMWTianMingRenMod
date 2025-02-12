@@ -66,6 +66,9 @@ public class QingTianHuLu extends CustomPotion
     public int getPotency(int potency) {
         return 1;
     }
-
+    public void initializeData() {
+        this.potency = getPotency();
+        this.description = DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1];
+    }
 }
 

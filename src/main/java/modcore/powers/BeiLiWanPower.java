@@ -37,8 +37,6 @@ public class BeiLiWanPower extends AbstractPower
         // 首次添加能力更新描述
         this.updateDescription();
     }
-
-
     // 能力在更新时如何修改描述
     public void updateDescription() {
         this.description = String.format(DESCRIPTIONS[0])+ this.amount+String.format(DESCRIPTIONS[1]);

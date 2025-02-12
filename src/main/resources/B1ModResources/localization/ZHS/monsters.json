@@ -16,5 +16,14 @@
     "DIALOG": [
       "施主何不放下棍棒，与我学学佛法？ "
     ]
+  },
+  "blackmythwukong:ShuangShuang": {
+    "MOVES": [
+      "不能行动"
+    ],
+    "NAME": "石双双",
+    "DIALOG": [
+      ""
+    ]
   }
 }

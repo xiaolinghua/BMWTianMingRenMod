@@ -1,12 +1,13 @@
 package modcore.cards.skill;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import modcore.Patches.AbstractB1Card;
-import modcore.actions.ModifyMagicAction;
+import modcore.cards.other.HouYao;
 import modcore.powers.TongTouPower;
 import modcore.utils.SfxUtil;
 
@@ -29,6 +30,7 @@ public class TongTouTieBi extends AbstractB1Card {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
+        this.cardsToPreview = new HouYao();
     }
 
     @Override
@@ -36,7 +38,7 @@ public class TongTouTieBi extends AbstractB1Card {
     {
         sfxUtil.playSFX();
         addToBot(new ApplyPowerAction(p, p, new TongTouPower(p, magicNumber), magicNumber));
-        addToBot(new ModifyMagicAction(this.uuid,-1));
+        addToBot(new MakeTempCardInHandAction(new HouYao()));
     }
 
 

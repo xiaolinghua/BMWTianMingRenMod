@@ -30,7 +30,6 @@ public class ChengShenZuiJi extends AbstractB1Card {
     public ChengShenZuiJi() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = 7;
-
     }
 
     @Override
@@ -49,7 +48,21 @@ public class ChengShenZuiJi extends AbstractB1Card {
                 addToBot(new SFXAction("ATTACK_BOWLING"));
             }
         }
-
+    public void applyPowers()
+    {
+        int count = 0;
+        for (AbstractMonster m2 : (AbstractDungeon.getCurrRoom()).monsters.monsters)
+        {
+            if (!m2.isDeadOrEscaped())
+            {
+                count++;
+            }
+        }
+        this.attackCount = count;
+        super.applyPowers();
+        this.rawDescription = CARD_STRINGS.DESCRIPTION + CARD_STRINGS.EXTENDED_DESCRIPTION[0]+this.attackCount+CARD_STRINGS.EXTENDED_DESCRIPTION[1];
+        this.initializeDescription();
+    }
 
     @Override
     public void upgrade() {

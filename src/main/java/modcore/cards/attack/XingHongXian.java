@@ -30,6 +30,7 @@ public class XingHongXian extends AbstractB1Card {
         this.block=this.baseBlock =10;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
+        this.attackCount = 3;
     }
 
     @Override
@@ -37,13 +38,12 @@ public class XingHongXian extends AbstractB1Card {
     {
         addToBot(new XingHongXianAction(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT,this.magicNumber));
     }
-
-
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
             upgradeMagicNumber(1);
+            this.attackCount++;
         }
     }
 }

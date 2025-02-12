@@ -6,11 +6,14 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import modcore.Patches.AbstractB1Card;
+import modcore.gameEffect.TrailEffect;
 
+import static modcore.B1Mod.MyOrblist;
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
 
 public class DingXiCunShen extends AbstractB1Card {
@@ -41,24 +44,36 @@ public class DingXiCunShen extends AbstractB1Card {
                     addToBot(new GainEnergyAction(1));
                     addToBot(new DrawCardAction(p, 1));
                     addToBot(new ReducePowerAction(p, p, "blackmythwukong:GunShi",3));
+                    AbstractDungeon.effectList.add(new TrailEffect(MyOrblist.get(0).hb.cX, MyOrblist.get(0).hb.cY, 198.0F * Settings.xScale, 190.0F * Settings.yScale));
                 }
                 else if (amount >= 6 && amount < 9)
                 {
                     addToBot(new GainEnergyAction(2));
                     addToBot(new DrawCardAction(p, 2));
                     addToBot(new ReducePowerAction(p, p, "blackmythwukong:GunShi",6));
+                    AbstractDungeon.effectList.add(new TrailEffect(MyOrblist.get(0).hb.cX, MyOrblist.get(0).hb.cY, 198.0F * Settings.xScale, 190.0F * Settings.yScale));
+                    AbstractDungeon.effectList.add(new TrailEffect(MyOrblist.get(1).hb.cX, MyOrblist.get(1).hb.cY, 198.0F * Settings.xScale, 190.0F * Settings.yScale));
+
                 }
                 else if (amount >= 9&&amount < 12)
                 {
                     addToBot(new GainEnergyAction(3));
                     addToBot(new DrawCardAction(p, 3));
                     addToBot(new ReducePowerAction(p, p, "blackmythwukong:GunShi",9));
+                    AbstractDungeon.effectList.add(new TrailEffect(MyOrblist.get(0).hb.cX, MyOrblist.get(0).hb.cY, 198.0F * Settings.xScale, 190.0F * Settings.yScale));
+
+                    AbstractDungeon.effectList.add(new TrailEffect(MyOrblist.get(1).hb.cX, MyOrblist.get(1).hb.cY, 198.0F * Settings.xScale, 190.0F * Settings.yScale));
+                    AbstractDungeon.effectList.add(new TrailEffect(MyOrblist.get(2).hb.cX, MyOrblist.get(2).hb.cY, 198.0F * Settings.xScale, 190.0F * Settings.yScale));
                 }
                 else if (amount >= 12)
                 {
                     addToBot(new GainEnergyAction(4));
                     addToBot(new DrawCardAction(p, 4));
                     addToBot(new ReducePowerAction(p, p, "blackmythwukong:GunShi",12));
+                    AbstractDungeon.effectList.add(new TrailEffect(MyOrblist.get(0).hb.cX, MyOrblist.get(0).hb.cY, 198.0F * Settings.xScale, 190.0F * Settings.yScale));
+                    AbstractDungeon.effectList.add(new TrailEffect(MyOrblist.get(1).hb.cX, MyOrblist.get(1).hb.cY, 198.0F * Settings.xScale, 190.0F * Settings.yScale));
+                    AbstractDungeon.effectList.add(new TrailEffect(MyOrblist.get(2).hb.cX, MyOrblist.get(2).hb.cY, 198.0F * Settings.xScale, 190.0F * Settings.yScale));
+                    AbstractDungeon.effectList.add(new TrailEffect(MyOrblist.get(3).hb.cX, MyOrblist.get(3).hb.cY, 198.0F * Settings.xScale, 190.0F * Settings.yScale));
                 }
         }
     }

@@ -1,15 +1,14 @@
 package modcore.cards.skill;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import modcore.Patches.AbstractB1Card;
+import modcore.powers.GunShiPower;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
 
@@ -36,10 +35,9 @@ public class LongJingHuMeng extends AbstractB1Card {
     public void use(AbstractPlayer p, AbstractMonster m)
     {
         addToBot(new GainBlockAction(p, p, this.block));
-        if (this.upgraded)
+        if (!this.upgraded)
         {
-            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));
-            addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, 2), 2));
+            addToBot(new ReducePowerAction(p,p, GunShiPower.POWER_ID,1));
         }
     }
 
@@ -47,9 +45,9 @@ public class LongJingHuMeng extends AbstractB1Card {
     public void applyPowers()
     {
 
-        if (AbstractDungeon.player.hasPower("blackmythwukong:GunShi"))
+        if (AbstractDungeon.player.hasPower(GunShiPower.POWER_ID))
         {
-            this.baseBlock=AbstractDungeon.player.getPower("blackmythwukong:GunShi").amount*magicNumber;
+            this.baseBlock=AbstractDungeon.player.getPower(GunShiPower.POWER_ID).amount*magicNumber;
         }
         else
         {

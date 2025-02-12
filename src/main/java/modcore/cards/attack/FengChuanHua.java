@@ -1,9 +1,8 @@
 package modcore.cards.attack;
 
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.AutoplayField;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 import modcore.Patches.AbstractB1Card;
-import modcore.actions.DrawToDiscardAction;
+import modcore.actions.FindStrongestMonsterAndAttackAction;
 
 import static modcore.Characters.WuKong.Enums.BMW_CARD;
 
@@ -35,47 +34,18 @@ public class FengChuanHua extends AbstractB1Card {
         this.damage = this.baseDamage = 0;
         this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
+        AutoplayField.autoplay.set(this, true);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m)
     {
-        AbstractMonster strongestMonster = null;
-        for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters)
-        {
-            if (!m2.isDeadOrEscaped())
-            {
-                if (strongestMonster == null || m2.currentHealth > strongestMonster.currentHealth)
-                {
-                    strongestMonster = m2;
-                }
-            }
-        }
         newapplyPowers();
-        addToBot(new DamageAction(strongestMonster, new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL)));
+        addToBot(new FindStrongestMonsterAndAttackAction(new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL)));
         addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, "blackmythwukong:GunShi"));
         addToBot(new VFXAction(new WhirlwindEffect(new Color(1.0F, 0.9F, 0.4F, 1.0F), false)));
-        addToBot(new DrawToDiscardAction(this, AbstractDungeon.player.hand));
     }
-    public void triggerWhenDrawn()
-    {
-        AbstractMonster strongestMonster = null;
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters)
-        {
-            if (!m.isDeadOrEscaped())
-            {
-                if (strongestMonster == null || m.currentHealth > strongestMonster.currentHealth)
-                {
-                    strongestMonster = m;
-                }
-            }
-        }
-        newapplyPowers();
-        addToBot(new DamageAction(strongestMonster, new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL)));
-        addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, "blackmythwukong:GunShi"));
-        addToBot(new VFXAction(new WhirlwindEffect(new Color(1.0F, 0.9F, 0.4F, 1.0F), false)));
-        addToBot(new DrawToDiscardAction(this, AbstractDungeon.player.hand));
-    }
+
     public void newapplyPowers()
     {
 
@@ -89,33 +59,17 @@ public class FengChuanHua extends AbstractB1Card {
             {
                 this.baseDamage = AbstractDungeon.player.getPower("blackmythwukong:GunShi").amount * magicNumber+5;
             }
-
         }else
         {
-            if (GameActionManager.turn == 1 && AbstractDungeon.player.hasRelic("blackmythwukong:ChanShiWan"))
+            if (!this.upgraded)
             {
-
-                if (!this.upgraded)
-                {
-                    this.baseDamage = 3 * magicNumber;
-                }
-                else
-                {
-                    this.baseDamage = 3 * magicNumber + 5;
-                }
-
+                this.baseDamage = 0;
             }
             else
             {
-                if (!this.upgraded)
-                {
-                    this.baseDamage = 0;
-                }
-                else
-                {
-                    this.baseDamage = 5;
-                }
+                this.baseDamage = 5;
             }
+
         }
         super.applyPowers();
         System.out.println("applyPowers凤传花的伤害"+this.baseDamage);

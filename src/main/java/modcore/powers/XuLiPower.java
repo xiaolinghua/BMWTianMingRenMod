@@ -21,9 +21,8 @@ public class XuLiPower extends AbstractPower
     private static final String NAME = powerStrings.NAME;
     // 能力的描述
     private static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private final int gunshi;
 
-    public XuLiPower(AbstractCreature owner,int Gunshi)
+    public XuLiPower(AbstractCreature owner,int amount)
     {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -31,8 +30,7 @@ public class XuLiPower extends AbstractPower
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
         // 如果需要不能叠加的能力，只需将上面的Amount参数删掉，并把下面的Amount改成-1就行
-        this.amount = -1;
-        gunshi=Gunshi;
+        this.amount = amount;
         // 添加一大一小两张能力图
         String path128 = "B1ModResources/images/powers/Xuli84.png";
         String path48 = "B1ModResources/images/powers/Xuli32.png";
@@ -43,12 +41,12 @@ public class XuLiPower extends AbstractPower
     }
     public void atEndOfTurn(boolean isPlayer)
     {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GunShiPower(AbstractDungeon.player, gunshi), gunshi));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GunShiPower(AbstractDungeon.player, amount), amount));
         addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "blackmythwukong:XuLiPower"));
     }
 
     // 能力在更新时如何修改描述
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0]);
+        this.description = DESCRIPTIONS[0]+this.amount+DESCRIPTIONS[1];
     }
 }
